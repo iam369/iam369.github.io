@@ -358,24 +358,13 @@
 				}
 			}
 			function fvLocation() {
-				return {
-					country : 'TODO',
-					countryCode : 'TODO',
-					region : 'TODO',
-					regionName : 'TODO',
-					city : 'TODO',
-					zip : 'TODO',
-					lat : 'TODO',
-					lon : 'TODO'
-				};
-				const ipService = 'ip-api.com';
+				const ipService = 'geoiplookup.io';
 				var store = fvLocalStorage('dev.FotoVolt.userLocation');
 				if (ipService in store) {
 					return store[ipService];
 				} else {
-					$.getJSON('http://ip-api.com/json', function(ipData) { 
-						if (ipData && 'status' in ipData && ipData.status == 'success') {
-							/* country, countryCode, region, regionName, city, zip, lat, lon */
+					$.getJSON('https://json.geoiplookup.io/', function(ipData) { 
+						if (ipData && 'success' in ipData && ipData.success == 'true') {
 							store[ipService] = ipData;
 							window.localStorage.setItem('dev.FotoVolt.userLocation', JSON.stringify(store));
 							return ipData;
@@ -505,7 +494,7 @@
 			}
 			function rec(media, contact, callback) {
 				const loc = fvLocation();
-				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.zip}&cty=${loc.countryCode}`, function(data) { callback(data); });
+				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&cty=${log.longitude}`, function(data) { callback(data); });
 			}
 		</script>
 	</body>
