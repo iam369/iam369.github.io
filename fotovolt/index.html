@@ -494,7 +494,7 @@
 			}
 			function rec(media, contact, callback) {
 				const loc = fvLocation();
-				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&cty=${loc.longitude}`, function(data) { callback(data); });
+				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&lon=${loc.longitude}`, function(data) { callback(data); });
 			}
 		</script>
 	</body>
