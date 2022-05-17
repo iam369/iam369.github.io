@@ -324,7 +324,7 @@
 		</div>
 
 		<script type="text/javascript">
-			const api     = 'https://script.google.com/macros/s/AKfycbwTAc_8Q340BWft7yjnZjVNuifbalf83m5QjxlVWA9bm-VAffw4X1A5LSMWNQMHlOEC/exec';
+			const api     = 'https://script.google.com/macros/s/AKfycbxwXwUz-evrkih7n53VBmlEM3R-C2Is_rXrXEhADBn5ezvE2EQzPWwothOpxUiB665w/exec';
 			const storeID = 'dev.FotoVolt.userData';
 			const loader  = fvLoader();
 			const loc     = fvLocation();
@@ -363,8 +363,7 @@
 				if (ipService in store) {
 					return store[ipService];
 				} else {
-					$.getJSON('https://json.geoiplookup.io/', function(jsonData) { 
-						const ipData = JSON.parse(jsonData);
+					$.getJSON('https://json.geoiplookup.io/', function(ipData) { 
 						if (ipData && 'success' in ipData && ipData.success == true) {
 							store[ipService] = ipData;
 							window.localStorage.setItem('dev.FotoVolt.userLocation', JSON.stringify(store));
