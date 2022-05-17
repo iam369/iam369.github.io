@@ -363,7 +363,7 @@
 				if (ipService in store) {
 					return store[ipService];
 				} else {
-					$.getJSON('https://ip-api.com/json', function(ipData) { 
+					$.getJSON('http://ip-api.com/json', function(ipData) { 
 						if (ipData && 'status' in ipData && ipData.status == 'success') {
 							/* country, countryCode, region, regionName, city, zip, lat, lon */
 							store[ipService] = ipData;
