@@ -363,8 +363,9 @@
 				if (ipService in store) {
 					return store[ipService];
 				} else {
-					$.getJSON('https://json.geoiplookup.io/', function(ipData) { 
-						if (ipData && 'success' in ipData && ipData.success == 'true') {
+					$.getJSON('https://json.geoiplookup.io/', function(jsonData) { 
+						const ipData = JSON.parse(jsonData);
+						if (ipData && 'success' in ipData && ipData.success == true) {
 							store[ipService] = ipData;
 							window.localStorage.setItem('dev.FotoVolt.userLocation', JSON.stringify(store));
 							return ipData;
