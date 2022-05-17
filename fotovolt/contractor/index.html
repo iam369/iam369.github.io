@@ -124,8 +124,10 @@
 
 		<script type="text/javascript">
 			const api = 'https://script.google.com/macros/s/AKfycbwTAc_8Q340BWft7yjnZjVNuifbalf83m5QjxlVWA9bm-VAffw4X1A5LSMWNQMHlOEC/exec';
-			const domain = 'fotovolt.solar';
+			const domain = 'iam369.github.io/fotovolt';
 			const inputs = new URLSearchParams(window.location.search);
+console.log(`loc.search: ${window.location.search}`);
+console.log(`loc.hash: ${window.location.hash}`);
 console.log(`1 query ID: ${inputs.get('id')}`);
 const fvSID = () => { return ''; };
 			$(function() {
