@@ -43,71 +43,74 @@
 		<link rel="alternate" type="application/rss+xml" title="RSS News Feed for {{ LFoSite.domain }}" href="/rss.xml" />
 
 		<style>
-			.parallax {
-				/* The image used */
-				background-image: url('media/parallax.jpg');
-				/* Set a specific height */
-				min-height: 100%;
-				/* Create the parallax scrolling effect */
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			.parallax_savings {
-				/* The image used */
-				background-image: url('media/parallax-energy-savings.jpg');
-				/* Set a specific height */
-				min-height: 100%;
-				/* Create the parallax scrolling effect */
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			.lfoseo { display: none }
+:root {
+--lfo-mobile-seo-value: 0px;
+}
+.parallax {
+	/* The image used */
+	background-image: url('media/parallax.jpg');
+	/* Set a specific height */
+	min-height: 100%;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.parallax_savings {
+	/* The image used */
+	background-image: url('media/parallax-energy-savings.jpg');
+	/* Set a specific height */
+	min-height: 100%;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.lfoseo { display: inline-block; width: var(--lfo-mobile-seo-value); height: var(--lfo-mobile-seo-value); overflow: hidden; position: absolute; }
+:target::before { content: ""; display: block; height: 72px; margin: -72px 0 0; }
 		</style>
 
 	</head>
-	<body class="bg-white text-black link-primary">
-		<header>
-			<nav id="fvNavBar" class="navbar navbar-expand-lg fixed-top navbar-light bg-white bg-opacity-75">
-				<div class="container">
-					<a class="navbar-brand" href="/">
-						<img src="/fotovolt/media/svg/duotone/sun.svg" alt="FotoVolt" width="36" height="36" class="d-inline-block align-text-bottom me-2">
-						<h1 class="d-inline-block m-0 p-0">FotoVolt</h1>
+	<body class="bg-white text-black link-primary" data-bs-spy="scroll" data-bs-target="#fvNavBar" data-bs-offset="72" tabindex="0">
+		<header style="height:72px">
+			<nav id="fvNavBar" class="container-fluid navbar navbar-expand-lg fixed-top navbar-light bg-white">
+				<div class="container g-0">
+					<a class="navbar-brand hstack gap-3 me-4 me-md-5" href="/">
+						<img src="media/fotovolt-solar-logo.png" alt="Fotovoltika" width="40" height="40">
+						<span class="text-uppercase fs-4 fw-bold m-0 p-0">Fotovoltika</span>
 					</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fvNavBarCollapse" aria-controls="fvNavBarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<div class="d-flex flex-wrap w-100">
-							<div class="d-block d-lg-none"><hr /></div>
+					<div class="collapse navbar-collapse" id="fvNavBarCollapse">
+						<div class="d-flex flex-wrap align-items-center w-100">
 							<div>
-								<ul class="navbar-nav">
+								<ul class="nav nav-pills">
 									<li class="nav-item">
 										<a class="nav-link" href="#o-nas">Kto sme?</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#products">Čo ponúkame?</a>
+										<a class="nav-link" href="#produkty">Čo ponúkame?</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#ako-usetrit">Ušetrite za elektrinu!</a>
+										<a class="nav-link" href="#usetrite">Ušetrite za elektrinu!</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="#kontakt">Kontakt</a>
 									</li>
 								</ul>
 							</div>
-							<div class="hstack gap-1 ps-4 mt-auto ms-auto my-2">
+							<div class="hstack gap-1 ps-4 ms-auto my-2">
 								<div role="button" class="d-flex align-items-center">
-									<img class="fvContractorPhone me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+									<img class="fvContractorPhone me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32" height="32" />
 								</div>
 								<div role="button" class="d-flex align-items-center">
-									<img class="fvContractorEmail me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+									<img class="fvContractorEmail me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32" height="32" />
 								</div>
 								<div role="button" class="d-flex align-items-center">
-									<a href="#" class="fvMessengerURL" target="_blank" rel="external noopener"><img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32px" height="32px" /></a>
+									<a href="#" class="fvMessengerURL" target="_blank" rel="external noopener"><img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32" height="32" /></a>
 								</div>
 							</div>
 						</div>
@@ -115,21 +118,23 @@
 				</div>
 			</nav>
 		</header>
-		<main data-bs-spy="scroll" data-bs-target="#fvNavBar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-			<section class="container-fluid p-0 my-5">
+		<main id="o-nas">
+			<!--  Products  -->
+			<section class="mb-5">
 				<h1 class="lfoseo">Kompletné fotovoltické riešenia na kľúč</h1>
-				<p class="lfoseo"></p>
-				<div class="border position-relative justify-content-center">
-					<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-primary text-white px-5 py-2"><h2 id="about" class="m-0 p-0">Kto sme?</h2></div>
-				</div>
-				<div class="container py-5">
-					Sme súčasťou NEP. blah blah blah...
+				<p class="lfoseo">TODO</p>
+				<div class="container-fluid">
+					<div class="container g-0">
+						<div class="d-flex flex-wrap flex-md-nowrap pt-3">
+							<div class="fs-2 fw-bold text-uppercase text-nowrap pt-0 pb-1 my-0 me-4">Kto sme?</div>
+							<div>Sme súčasťou spoločnosti Národný Energetický Projekt, dodávateľa kompletných solárnych riešení. Našou hlavnou špecializáciou sú fotovoltické inštalácie pre domy, firmy a farmy. Našou špecialitou je komplexný zákaznícky servis, profesionálny dizajn, získanie finančných prostriedkov EÚ, montáž na najvyššej úrovni a servisná starostlivosť.</div>
+						</div>
+					</div>
 				</div>
 			</section>
-
 			<!--  Products  -->
-			<section class="container-fluid px-0 py-0 mb-5 parallax">
-				<h2 id="products" class="lfoseo">Fotovoltické riešenia a produkty</h2>
+			<section id="produkty" class="mb-5 parallax">
+				<h2 class="lfoseo">Fotovoltické riešenia a produkty</h2>
 				<div class="container-fluid bg-dark bg-opacity-75">
 					<div class="container g-0">
 						<div class="row row-cols-1 row-cols-md-2">
@@ -194,15 +199,15 @@
 									Zjednodušujeme celý proces. Zabezpečíme vám výhodné financovanie s najlepšími na trhu.
 									<div class="d-flex flex-wrap mt-2">
 										<div class="hstack gap-2 text-center me-4">
-											<div><img src="media/financovanie-homecredit.png" height="28px" alt="Financovanie cez Homecredit"></div>
+											<div><img src="media/financovanie-homecredit.png" height="28" alt="Financovanie cez Homecredit"></div>
 											<div>Homecredit</div>
 										</div>
 										<div class="hstack gap-2 text-center me-4">
-											<div><img src="media/financovanie-ahojsplatky.png" height="28px" alt="Financovanie cez Ahojsplátky"></div>
+											<div><img src="media/financovanie-ahojsplatky.png" height="28" alt="Financovanie cez Ahojsplátky"></div>
 											<div>Ahojsplátky</div>
 										</div>
 										<div class="hstack gap-2 text-center me-4">
-											<div><img src="media/financovanie-zinceuro.png" height="28px" alt="Financovanie cez ZincEuro"></div>
+											<div><img src="media/financovanie-zinceuro.png" height="28" alt="Financovanie cez ZincEuro"></div>
 											<div>ZincEuro</div>
 										</div>
 									</div>
@@ -285,10 +290,9 @@
 					</div>
 				</div>
 			</section>
-
 			<!--  Save on Electricity  -->
-			<section class="container-fluid px-0 py-0 _pb-5 parallax_savings">
-				<h2 id="ako-usetrit" class="lfoseo">Ako ušetriť za elektrinu</h2>
+			<section id="usetrite" class="parallax_savings">
+				<h2 class="lfoseo">Ako ušetriť za elektrinu</h2>
 				<div class="container-fluid bg-dark bg-opacity-75">
 					<div class="container g-0">
 						<div class="row row-cols-1 row-cols-md-2">
@@ -327,13 +331,12 @@
 					</div>
 				</div>
 			</section>
-
 			<!--  Contact  -->
-			<section class="container-fluid px-0 py-0 pb-5 parallax">
+			<section id="kontakt" class="pb-5 parallax">
 				<div class="container-fluid bg-dark bg-opacity-75">
 					<div class="container g-0">
 						<div class="row row-cols-1 row-cols-md-2">
-							<div class="col d-flex align-items-center py-3"><h2 id="kontakt" class="fw-bold fs-2 text-light text-uppercase p-0 m-0">Kontakt</h2></div>
+							<div class="col d-flex align-items-center py-3"><h2 class="fw-bold fs-2 text-light text-uppercase p-0 m-0">Kontakt</h2></div>
 							<div class="col d-flex align-items-stretch">
 								<div class="d-flex flex-fill align-items-center bg-warning py-2">
 									<div class="w-100 text-center px-2"><h3 class="fs-2 fw-bold p-0 m-0">Požiadajte o audit zadarmo</h3></div>
@@ -348,7 +351,7 @@
 							<div class="d-flex flex-wrap flex-fill align-items-center justify-content-center py-4">
 								<div class="mx-5">
 									<div class="vstack text-center">
-										<div class="mb-2"><img id="contractorPhoto" src="/fotovolt/media/person.png" class="img-fluid rounded-pill" width="160px" height="160px"></div>
+										<div class="mb-2"><img id="contractorPhoto" src="/fotovolt/media/person.png" class="img-fluid rounded-pill" width="160" height="160"></div>
 										<div id="contractorName" class="fs-2 fw-bold text-nowrap">Martina G.</div>
 										<hr class="d-block d-md-none" />
 									</div>
@@ -356,15 +359,15 @@
 								<div class="mx-2 mx-md-3 my-3">
 									<div class="vstack gap-3">
 										<div class="fvContractorPhone d-flex align-items-center">
-											<img role="button" class="me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+											<img role="button" class="me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32" height="32" />
 											<span role="button" class="fvContractorPhoneValue col-auto fs-3 fw-bold link-primary">+421 951 860 927</span>
 										</div>
 										<div class="fvContractorEmail d-flex align-items-center">
-											<img role="button" class="me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+											<img role="button" class="me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32" height="32" />
 											<span role="button" class="fvContractorEmailValue col-auto fs-3 fw-bold link-primary">martina@fotovolt.solar</span>
 										</div>
 										<div class="d-flex align-items-center">
-											<img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32px" height="32px" />
+											<img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32" height="32" />
 											<a href="#" role="button" class="fvMessengerURL fvContractorMessengerValue col-auto fs-3 fw-bold link-primary text-decoration-none" target="_blank" rel="external noopener">https://m.me/martina</a>
 										</div>
 									</div>
@@ -403,7 +406,7 @@
 				<div class="modal-dialog modal-dialog-scrollable">
 					<div class="modal-content shadow">
 						<div class="modal-header bg-primary text-white">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32" height="32" />
 							<h5 class="modal-title">Kontakt cez telefón</h5>
 							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
@@ -441,7 +444,7 @@
 				<div class="modal-dialog modal-dialog-scrollable">
 					<div class="modal-content shadow">
 						<div class="modal-header bg-primary text-white">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/envelope.svg" width="32" height="32" />
 							<h5 class="modal-title">Kontakt cez e-mail</h5>
 							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
@@ -477,7 +480,7 @@
 				<div class="modal-dialog modal-lg modal-dialog-scrollable">
 					<div class="modal-content shadow">
 						<div class="modal-header bg-primary text-white">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/money-bill-alt.svg" width="32px" height="32px" />
+							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/money-bill-alt.svg" width="32" height="32" />
 							<h5 class="modal-title">Info o Bonusoch</h5>
 							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
@@ -510,7 +513,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content shadow">
 						<div class="modal-header bg-light border-0">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/info-circle.svg" width="32px" height="32px" />
+							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/info-circle.svg" width="32" height="32" />
 							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
 						<div class="modal-body text-dark bg-light px-4 py-3">
@@ -552,7 +555,7 @@
 		</main>
 		<footer class="container-fluid bg-dark text-light">
 			<div class="container g-0 py-4 py-md-5">
-				Footer
+				
 			</div>
 		</div>
 		</footer>
