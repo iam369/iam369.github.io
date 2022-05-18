@@ -45,7 +45,7 @@
 		<style>
 			.parallax {
 				/* The image used */
-				background-image: url('/fotovolt/media/parallax.jpg');
+				background-image: url('media/parallax.jpg');
 				/* Set a specific height */
 				min-height: 100%;
 				/* Create the parallax scrolling effect */
@@ -56,7 +56,7 @@
 			}
 			.parallax_savings {
 				/* The image used */
-				background-image: url('/fotovolt/media/parallax-energy-savings.jpg');
+				background-image: url('media/parallax-energy-savings.jpg');
 				/* Set a specific height */
 				min-height: 100%;
 				/* Create the parallax scrolling effect */
@@ -92,9 +92,6 @@
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="#calculator">Ušetrite za elektrinu!</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#finances">Financovanie</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="#contact">Kontakt</a>
@@ -134,7 +131,7 @@
 						<div class="row row-cols-1 row-cols-md-2">
 							<div class="col d-flex align-items-center py-3"><h2 class="fw-bold fs-2 text-light text-uppercase p-0 m-0">Čo ponúkame?</h2></div>
 							<div class="col d-flex align-items-stretch">
-								<div class="d-flex flex-fill align-items-center bg-white py-2">
+								<div class="d-flex flex-fill align-items-center bg-light py-2">
 									<div class="w-100 text-center px-2"><h3 class="fs-2 fw-bold p-0 m-0">Fotovoltika na kľúč</h3></div>
 								</div>
 							</div>
@@ -146,7 +143,7 @@
 						<div class="row">
 							<div class="col-12 col-md-6 bg-transparent"></div>
 							<div class="col-12 col-md-6">
-								<div class="px-3 vstack gap-3 p-3 bg-white">
+								<div class="vstack gap-3 p-3 bg-white">
 									<ul class="list-group list-group-flush text-center">
 										<li class="list-group-item"><a class="link-primary" href="#contact" title="Požiadajte o Audit zadarmo">Audit zadarmo</a></li>
 										<li class="list-group-item">Návrh solárnych zariadení</li>
@@ -163,19 +160,22 @@
 					</div>
 				</div>
 				<div class="container-fluid bg-white py-5">
-					<div class="container">
+					<div class="container g-0">
 						<div class="d-flex align-items-start">
 							<div class="nav flex-column nav-pills me-3" id="fvStepByStepTabs" role="tablist" aria-orientation="vertical">
-								<button class="nav-link active text-nowrap" id=fvStepByStep-audit-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-audit" type="button" role="tab" aria-controls="fvStepByStep-audit" aria-selected="true">
+								<button class="nav-link active" id=fvStepByStep-audit-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-audit" type="button" role="tab" aria-controls="fvStepByStep-audit" aria-selected="true">
 									Konzultácia &amp; Audit
 								</button>
-								<button class="nav-link text-nowrap" id="fvStepByStep-design-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-design" type="button" role="tab" aria-controls="fvStepByStep-design" aria-selected="false">
+								<button class="nav-link" id="fvStepByStep-design-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-design" type="button" role="tab" aria-controls="fvStepByStep-design" aria-selected="false">
 									Individuálny design
 								</button>
-								<button class="nav-link text-nowrap" id="fvStepByStep-installation-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-installation" type="button" role="tab" aria-controls="fvStepByStep-installation" aria-selected="false">
+								<button class="nav-link" id="fvStepByStep-finance-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-finance" type="button" role="tab" aria-controls="fvStepByStep-finance" aria-selected="false">
+									Financovanie
+								</button>
+								<button class="nav-link" id="fvStepByStep-installation-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-installation" type="button" role="tab" aria-controls="fvStepByStep-installation" aria-selected="false">
 									Inštalácia fotovoltického zariadenia
 								</button>
-								<button class="nav-link text-nowrap" id="fvStepByStep-powerplant-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-powerplant" type="button" role="tab" aria-controls="fvStepByStep-powerplant" aria-selected="false">
+								<button class="nav-link" id="fvStepByStep-powerplant-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-powerplant" type="button" role="tab" aria-controls="fvStepByStep-powerplant" aria-selected="false">
 									Vlastná solárna elektráreň
 								</button>
 							</div>
@@ -185,6 +185,9 @@
 								</div>
 								<div class="tab-pane fade" id="fvStepByStep-design" role="tabpanel" aria-labelledby="fvStepByStep-design-tab">
 									Po audite naše projekčné oddelenie vypracuje individuálny projekt solárnej elektrárne, ktorý zabezpečí maximálny úžitok z investície.
+								</div>
+								<div class="tab-pane fade" id="fvStepByStep-finance" role="tabpanel" aria-labelledby="fvStepByStep-finance-tab">
+									TODO
 								</div>
 								<div class="tab-pane fade" id="fvStepByStep-installation" role="tabpanel" aria-labelledby="fvStepByStep-installation-tab">
 									Po dodaní prvkov fotovoltického zariadenia na miesto montáže je elektráreň vyrobená montážnym tímom so zvláštnou starostlivosťou a presnosťou.
@@ -196,41 +199,43 @@
 						</div>
 					</div>
 				</div>
-				<div class="container">
-					<div class="row row-cols-1 row-cols-md-2 g-5 py-4 py-md-5">
-						<div class="col">
-							<div class="d-flex vstack gap-0 rounded-3 h-100">
-								<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre domácnosti</div>
-								<div class="p-4 bg-white rounded-bottom flex-fill">
-									<div>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosť s rôznymi zdrojmi energie, ktoré sú určené pre farmy rôznych veľkostí a rôznych energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Odporúčame ako štandardné súpravy, tak aj pokročilejšie riešenia SolarEdge, ktoré sa vyznačujú zvýšenou účinnosťou (o 25%), a to aj vtedy, keď sú solárne panely umiestnené v tienistých oblastiach.</div>
-									<div><a data-bs-toggle="collapse" href="#fvProductsHome">Viac...</a></div>
-									<div id="fvProductsHome" class="collapse mt-3">
-										<p>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosti ku ktorými pristupujeme individuálne z hľadiska rôznych veľkostí a energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Pri inštalácii používame striedače <b>Sofar Solar</b>.</p>
-										<h5>Akú fotovoltickú inštaláciu zvoliť pre rodinný dom?</h5>
-										<p>Inštalácia by mala byť vybraná tak, aby plne uspokojila energetické potreby vášho domu. Panely by sa mali inštalovať na strechu alebo na zem s vhodným sklonom, pokiaľ je to možné, úplne na južnú stranu. Všetky tieto a ďalšie dôležité informácie vám radi vysvetlíme počas <a class="link-primary" href="#contact" title="Požiadajte o Audit zadarmo">Auditu zadarmo</a>.</p>
+				<div class="container-fluid">
+					<div class="container g-0">
+						<div class="row row-cols-1 row-cols-md-2 gx-5 gy-3 py-4 py-md-5">
+							<div class="col">
+								<div class="d-flex vstack gap-0 rounded-3 h-100">
+									<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre domácnosti</div>
+									<div class="p-4 bg-white rounded-bottom flex-fill">
+										<div>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosť s rôznymi zdrojmi energie, ktoré sú určené pre farmy rôznych veľkostí a rôznych energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Odporúčame ako štandardné súpravy, tak aj pokročilejšie riešenia SolarEdge, ktoré sa vyznačujú zvýšenou účinnosťou (o 25%), a to aj vtedy, keď sú solárne panely umiestnené v tienistých oblastiach.</div>
+										<div><a data-bs-toggle="collapse" href="#fvProductsHome">Viac...</a></div>
+										<div id="fvProductsHome" class="collapse mt-3">
+											<p>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosti ku ktorými pristupujeme individuálne z hľadiska rôznych veľkostí a energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Pri inštalácii používame striedače <b>Sofar Solar</b>.</p>
+											<h5>Akú fotovoltickú inštaláciu zvoliť pre rodinný dom?</h5>
+											<p>Inštalácia by mala byť vybraná tak, aby plne uspokojila energetické potreby vášho domu. Panely by sa mali inštalovať na strechu alebo na zem s vhodným sklonom, pokiaľ je to možné, úplne na južnú stranu. Všetky tieto a ďalšie dôležité informácie vám radi vysvetlíme počas <a class="link-primary" href="#contact" title="Požiadajte o Audit zadarmo">Auditu zadarmo</a>.</p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col">
-							<div class="d-flex vstack gap-0 rounded-3 h-100">
-								<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre spoločnosti</div>
-								<div class="p-4 bg-white rounded-bottom flex-fill">
-									<div>Inštalácia fotovoltických panelov poskytuje finančné výhody nielen pre domácnosti. Naša ponuka obsahuje aj moderné fotovoltické riešenia pre spoločnosti, ktoré chcú urobiť krok vpred k vývoju a zavádzaniu technických inovácií. Vďaka našim solárnym systémom nielenže výrazne znížia energetický výdaj, ale tiež – vďaka optimalizácii výrobných nákladov – získajú výhodu oproti konkurencii, zvýšia prestíž spoločnosti a vstúpia do konceptu CSR, teda spoločenskej zodpovednosti firiem.</div>
-									<div><a data-bs-toggle="collapse" href="#fvProductsCompany">Viac...</a></div>
-									<div id="fvProductsCompany" class="collapse mt-3">
-<p>Fotovoltika pre spoločnosti - náklady spojené s nákupom elektriny tvoria významnú časť výdavkov podnikov. Cena jednej kWh elektriny sa ročne zvyšuje o približne 4,5% a v roku 2019 sa cena elektriny zvýšila až o 60%. Jedným z efektívnych riešení na zníženie množstva účtov za elektrinu je výstavba solárnej elektrárne, ktorá je schopná znížiť náklady spojené s nákupom elektriny až o 70%. Veľkosť solárnej elektrárne závisí od dopytu spoločnosti po elektrine. Kapacita zariadenia by mala byť vhodne zvolená podľa obchodného profilu a možností montáže, aby sa zabránilo príliš dlhej dobe návratnosti investícií do vašej vlastnej solárnej elektrárne.</p>
-<p>Moderné podniky musia investovať do technických inovácií, aby si udržali konkurenčnú výhodu. Vďaka optimalizácii prevádzkových nákladov závodu im umožňujú udržiavať atraktívne ceny výrobkov alebo služieb. Jednou z takýchto inovácií je fotovoltika pre spoločnosti. Účty za elektrinu spotrebúvajú leví podiel na hotovosti spoločnosti. Ak je dodávaná z fotovoltiky, spoločnosť nielenže tieto náklady významne minimalizuje, ale získava aj prestíž. Posledný uvedený je výsledkom moderného ekologického trendu, ktorý zahŕňa zavádzanie riešení bezpečných pre prírodné prostredie.</p>
-<h5>Prečo sa firmám oplatí investovať do fotovoltiky?</h5>
-<ul>
-	<li><b>Energetická nezávislosť</b> - energia vyrobená fotovoltickým zariadením pokrýva celú alebo časť spotreby elektriny, vďaka čomu je závod nezávislý od dodávok elektriny</li>
-	<li><b>Úspory</b> - nižšie účty za elektrinu
-	<li><b>Nezávislosť</b> od neustále rastúcich cien elektriny</li>
-	<li>Amortizáciu investičných nákladov a <b>odpočet od základu dane</b></li>
-	<li>Poskytuje <b>elektrinu z ekologických zdrojov</b></li>
-	<li><b>Zvyšuje hodnotu</b> vášho majetku</li>
-	<li>Umožňuje prevádzku podniku v okamihu zavedenia obmedzení v spotrebe energie, čím udržuje výrobu na optimálnej úrovni</li>
-</ul>
+							<div class="col">
+								<div class="d-flex vstack gap-0 rounded-3 h-100">
+									<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre spoločnosti</div>
+									<div class="p-4 bg-white rounded-bottom flex-fill">
+										<div>Inštalácia fotovoltických panelov poskytuje finančné výhody nielen pre domácnosti. Naša ponuka obsahuje aj moderné fotovoltické riešenia pre spoločnosti, ktoré chcú urobiť krok vpred k vývoju a zavádzaniu technických inovácií. Vďaka našim solárnym systémom nielenže výrazne znížia energetický výdaj, ale tiež – vďaka optimalizácii výrobných nákladov – získajú výhodu oproti konkurencii, zvýšia prestíž spoločnosti a vstúpia do konceptu CSR, teda spoločenskej zodpovednosti firiem.</div>
+										<div><a data-bs-toggle="collapse" href="#fvProductsCompany">Viac...</a></div>
+										<div id="fvProductsCompany" class="collapse mt-3">
+	<p>Fotovoltika pre spoločnosti - náklady spojené s nákupom elektriny tvoria významnú časť výdavkov podnikov. Cena jednej kWh elektriny sa ročne zvyšuje o približne 4,5% a v roku 2019 sa cena elektriny zvýšila až o 60%. Jedným z efektívnych riešení na zníženie množstva účtov za elektrinu je výstavba solárnej elektrárne, ktorá je schopná znížiť náklady spojené s nákupom elektriny až o 70%. Veľkosť solárnej elektrárne závisí od dopytu spoločnosti po elektrine. Kapacita zariadenia by mala byť vhodne zvolená podľa obchodného profilu a možností montáže, aby sa zabránilo príliš dlhej dobe návratnosti investícií do vašej vlastnej solárnej elektrárne.</p>
+	<p>Moderné podniky musia investovať do technických inovácií, aby si udržali konkurenčnú výhodu. Vďaka optimalizácii prevádzkových nákladov závodu im umožňujú udržiavať atraktívne ceny výrobkov alebo služieb. Jednou z takýchto inovácií je fotovoltika pre spoločnosti. Účty za elektrinu spotrebúvajú leví podiel na hotovosti spoločnosti. Ak je dodávaná z fotovoltiky, spoločnosť nielenže tieto náklady významne minimalizuje, ale získava aj prestíž. Posledný uvedený je výsledkom moderného ekologického trendu, ktorý zahŕňa zavádzanie riešení bezpečných pre prírodné prostredie.</p>
+	<h5>Prečo sa firmám oplatí investovať do fotovoltiky?</h5>
+	<ul>
+		<li><b>Energetická nezávislosť</b> - energia vyrobená fotovoltickým zariadením pokrýva celú alebo časť spotreby elektriny, vďaka čomu je závod nezávislý od dodávok elektriny</li>
+		<li><b>Úspory</b> - nižšie účty za elektrinu
+		<li><b>Nezávislosť</b> od neustále rastúcich cien elektriny</li>
+		<li>Amortizáciu investičných nákladov a <b>odpočet od základu dane</b></li>
+		<li>Poskytuje <b>elektrinu z ekologických zdrojov</b></li>
+		<li><b>Zvyšuje hodnotu</b> vášho majetku</li>
+		<li>Umožňuje prevádzku podniku v okamihu zavedenia obmedzení v spotrebe energie, čím udržuje výrobu na optimálnej úrovni</li>
+	</ul>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -238,8 +243,8 @@
 					</div>
 				</div>
 				<div class="container-fluid bg-white py-4">
-					<div class="container">
-						<h3 class="fw-bold fs-1 text-center">ZÁRUKA</h3>
+					<div class="container g-0">
+						<h3 class="fw-bold fs-1 text-center text-uppercase">Záruka</h3>
 						<div class="mb-4">Naše fotovoltické súpravy sú založené iba na prvkoch od renomovaných značiek, vďaka ktorým je ich efektivita a práca vždy na najvyššej úrovni. Spoločnosti ako: Fronius, Sofar Solar, SMA, Longi Solar, EXE Solar, REC, SUNPOWER, SunLink, Trina, JA Solar a SHARP patria medzi najlepších výrobcov vo fotovoltickom priemysle.</div>
 						<div class="row row-cols-1 row-cols-sm-3 gx-4 gy-3">
 							<div class="col">
@@ -272,7 +277,7 @@
 						<div class="row row-cols-1 row-cols-md-2">
 							<div class="col d-flex align-items-center py-3"><h2 class="fw-bold fs-2 text-light text-uppercase p-0 m-0">Ušetrite za elektrinu a plyn</h2></div>
 							<div class="col d-flex align-items-stretch">
-								<div class="d-flex flex-fill align-items-center bg-white py-2">
+								<div class="d-flex flex-fill align-items-center bg-light py-2">
 									<div class="w-100 text-center px-2"><h3 class="fs-2 fw-bold p-0 m-0">o 90% nižšie účty za elektrinu</h3></div>
 								</div>
 							</div>
@@ -284,7 +289,7 @@
 						<div class="row">
 							<div class="col-12 col-md-6 bg-transparent"></div>
 							<div class="col-12 col-md-6">
-								<div class="px-3 vstack gap-3 p-3 bg-white">
+								<div class="vstack gap-3 p-3 bg-white">
 									<div>Vďaka vhodne zvolenému výkonu fotovoltického zariadenia budú vaše účty za elektrinu nižšie až o 90%.</div>
 									<div>
 										<div class="fs-3 fw-bold">Virtuálna batéria</div>
@@ -307,7 +312,7 @@
 			</section>
 
 			<!--  Contact  -->
-			<section class="container-fluid px-0 py-0 mb-5 parallax">
+			<section class="container-fluid px-0 py-0 pb-5 parallax">
 				<div class="container-fluid bg-dark bg-opacity-75">
 					<div class="container g-0">
 						<div class="row row-cols-1 row-cols-md-2">
@@ -376,12 +381,6 @@
 					</div>
 				</div>
 			</section>
-
-
-
-
-
-
 			<!--  Contractor Phone Dialog  -->
 			<div id="contractorPhoneDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-scrollable">
@@ -534,8 +533,11 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-
+		<footer class="container-fluid bg-dark text-light">
+			<div class="container g-0 py-4 py-md-5">
+				Footer
+			</div>
+		</div>
 		</footer>
 		<script type="text/javascript">
 			const api     = 'https://script.google.com/macros/s/AKfycbxwXwUz-evrkih7n53VBmlEM3R-C2Is_rXrXEhADBn5ezvE2EQzPWwothOpxUiB665w/exec';
