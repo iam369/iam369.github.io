@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Language" content="en">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="google" content="notranslate">
+
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="author" href="[{{ LFoSite.url }}]" />
+		<link rel="canonical" href="{{ LFoSite.url }}{{ url }}" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@{{ twitter.user }}" />
+		<meta name="twitter:creator" content="@{{ twitter.user }}" />
+		<meta name="twitter:title" content="{{ twitter_title }}" />
+		<meta name="twitter:description" content="{{ twitter_description }}" />
+		<meta property="og:site_name" content="{{ LFoSite.name }}" />
+		<meta property="og:url" content="{{ LFoSite.url }}{{ url }}" />
+		<meta property="og:type" content="{{ og_type }}" />
+		<meta property="og:title" content="{{ og_title }}" />
+		<meta property="og:description" content="{{ og_description }}" />
+		<meta property="og:image" content="{{ LFoSite.url }}{{ img.file }}" />
+		<meta property="og:image:secure_url" content="{{ LFoSite.url | replace('http://', 'https://') }}{{ img.file }}" />
+		<meta property="og:image:type" content="{{ LFoUtility_ImageType.content(imgFile=img.file) }}" />
+		<meta property="og:image:alt" content="{{ img.alt }}" />
+		<meta property="og:image:width" content="{{ img.dimensions.width }}" />
+		<meta property="og:image:height" content="{{ img.dimensions.height }}" />
+		<meta property="og:video" content="{{ seo.og.video }}" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale:alternate" content="en_GB" />
+		<meta property="og:determiner" content="auto" />
+		<meta property="fb:app_id" content="{{ LFoSite.config.facebook.appID }}" />
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+		<link rel="alternate" type="application/rss+xml" title="RSS News Feed for {{ LFoSite.domain }}" href="/rss.xml" />
+	</head>
+	<body class="bg-white text-black link-success">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-success bg-gradient">
+			<div class="container">
+				<a class="navbar-brand" href="/">
+					<img src="/fotovolt/media/svg/duotone/sun.svg" alt="FotoVolt" width="36" height="36" class="d-inline-block align-text-bottom me-2">
+					<h1 class="d-inline-block m-0 p-0">FotoVolt</h1>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="d-flex flex-wrap w-100">
+						<div class="d-block d-lg-none"><hr /></div>
+						<div>
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="#about">Kto sme?</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#products">Čo ponúkame?</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#calculator">Ušetrite za elektrinu!</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#contact">Kontakt</a>
+								</li>
+							</ul>
+						</div>
+						<div class="hstack gap-1 ps-4 mt-auto ms-auto my-2">
+							<div role="button" class="d-flex align-items-center">
+								<img class="fvContractorPhone me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+							</div>
+							<div role="button" class="d-flex align-items-center">
+								<img class="fvContractorEmail me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+							</div>
+							<div role="button" class="d-flex align-items-center">
+								<a href="#" class="fvMessengerURL" target="_blank" rel="external noopener"><img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32px" height="32px" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="container-fluid p-0 my-5">
+			<div class="border position-relative justify-content-center">
+				<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-success text-white px-5 py-2"><h2 id="about" class="m-0 p-0">Kto sme?</h2></div>
+			</div>
+			<div class="container py-5">
+				Sme súčasťou NEP. blah blah blah...
+			</div>
+		</section>
+
+		<section class="container-fluid p-0 my-5">
+			<div class="border position-relative justify-content-center">
+				<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-success text-white px-5 py-2"><h2 id="products" class="m-0 p-0">Čo ponúkame?</h2></div>
+			</div>
+			<div class="container py-5">
+				FotoVolt na kľúč. blah blah blah...
+			</div>
+		</section>
+
+		<section class="container-fluid p-0 my-5">
+			<div class="border position-relative justify-content-center">
+				<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-success text-white px-5 py-2"><h2 id="calculator" class="m-0 p-0">Ušetrite za elektrinu!</h2></div>
+			</div>
+			<div class="container py-5">
+				... a to sa oplatí. blah blah blah...
+			</div>
+		</section>
+
+		<section class="container-fluid shadow p-0 my-5">
+			<div class="border position-relative justify-content-center">
+				<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-success text-white px-5 py-2"><h2 id="contact" class="m-0 p-0">Kontakt</h2></div>
+			</div>
+			<div class="container">
+				<div class="pt-5 pb-4 position-relative d-flex flex-wrap align-items-center justify-content-center justify-content-xl-between">
+					<div class="position-absolute top-0 start-50 translate-middle rounded-pill bg-success text-white px-5 py-2"><h2 id="contact" class="m-0 p-0">Kontakt</h2></div>
+					<div class="d-flex flex-wrap align-items-center justify-content-center">
+						<div class="mx-5">
+							<div class="vstack text-center">
+								<div class="mb-2"><img id="contractorPhoto" src="/fotovolt/media/person.png" class="img-fluid rounded-pill" width="160px" height="160px"></div>
+								<div id="contractorName" class="fs-2 fw-bold text-nowrap">Martina G.</div>
+								<hr class="d-block d-md-none" />
+							</div>
+						</div>
+						<div class="mx-md-3 my-3">
+							<div class="vstack gap-3">
+								<div class="fvContractorPhone d-flex align-items-center">
+									<img role="button" class="me-3" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+									<span role="button" class="fvContractorPhoneValue col-auto fs-3 fw-bold link-success">+421 951 860 927</span>
+								</div>
+								<div class="fvContractorEmail d-flex align-items-center">
+									<img role="button" class="me-3" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+									<span role="button" class="fvContractorEmailValue col-auto fs-3 fw-bold link-success">martina@fotovolt.solar</span>
+								</div>
+								<div class="d-flex align-items-center">
+									<img class="me-3" src="/fotovolt/media/svg/brands/facebook-messenger.svg" width="32px" height="32px" />
+									<a href="#" role="button" class="fvMessengerURL fvContractorMessengerValue col-auto fs-3 fw-bold link-success text-decoration-none" target="_blank" rel="external noopener">https://m.me/martina</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-warning bg-opacity-25 rounded-3 p-4 mx-md-4 my-3">
+						<div class="vstack gap-3">
+							<div>
+								<div class="mb-1">Zavoláme Vám:</div>
+								<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
+									<div class="input-group">
+										<span class="input-group-text">+421</span>
+										<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
+										<button type="button" class="fvContactFormButton btn btn-warning px-3">Odoslať</button>
+									</div>
+								</form>
+							</div>
+							<hr class="m-0 p-0" />
+							<div>
+								<div class="mb-1">Pošleme Vám e-mail:</div>
+								<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
+									<div class="input-group">
+										<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
+										<button type="button" class="fvContactFormButton btn btn-warning px-3">Odoslať</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  Contractor Phone Dialog  -->
+		<div id="contractorPhoneDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable">
+				<div class="modal-content shadow">
+					<div class="modal-header bg-success text-white">
+						<img class="me-3" role="button" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32px" height="32px" />
+						<h5 class="modal-title">Kontakt cez telefón</h5>
+						<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-dark bg-light vstack gap-3 px-4 py-2 p-lg-5 text-center">
+						<div>
+							<div class="fs-4 fw-bold">Zavoláme Vám:</div>
+							<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-success" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+							<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
+								<div class="input-group">
+									<span class="input-group-text">+421</span>
+									<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
+									<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+								</div>
+							</form>
+						</div>
+						<div><hr /></div>
+						<div>
+							<div class="fs-6">alebo kontaktujte</div>
+							<div class="fvContractorPhoneValue fs-4 fw-bold mb-3"></div>
+							<div class="d-flex flex-wrap justify-content-center">
+								<a id="fvCallURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Zavolať na číslo" target="_blank" rel="external noopener">Zavolať</a>
+								<a id="fvSmsURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať SMS správu" target="_blank" rel="external noopener">SMS</a>
+								<a id="fvWhatsUpURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez WhatsApp" target="_blank" rel="external noopener">WhatsApp</a>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer bg-light">
+						<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Zavrieť</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  Contractor Email Dialog  -->
+		<div id="contractorEmailDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable">
+				<div class="modal-content shadow">
+					<div class="modal-header bg-success text-white">
+						<img class="me-3" role="button" src="/fotovolt/media/svg/solid/envelope.svg" width="32px" height="32px" />
+						<h5 class="modal-title">Kontakt cez e-mail</h5>
+						<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-dark bg-light vstack gap-3 px-4 py-2 p-lg-5 text-center">
+						<div>
+							<div class="fs-4 fw-bold">Pošleme Vám e-mail:</div>
+							<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-success" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+							<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
+								<div class="input-group">
+									<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
+									<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+								</div>
+							</form>
+						</div>
+						<div><hr /></div>
+						<div>
+							<div class="fs-6">alebo pošlite e-mail na</div>
+							<div class="fvContractorEmailValue fs-4 fw-bold mb-3"></div>
+							<div class="d-flex flex-wrap justify-content-center">
+								<a id="fvEmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez predvolenú e-mail aplikáciu" target="_blank" rel="external noopener">E-mail App</a>
+								<a id="fvGmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez Gmail" target="_blank" rel="external noopener">Gmail</a>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer bg-light">
+						<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Zavrieť</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  Bonus Info Dialog  -->
+		<div id="fvBonusInfoDialog" class="modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-scrollable">
+				<div class="modal-content shadow">
+					<div class="modal-header bg-success text-white">
+						<img class="me-3" role="button" src="/fotovolt/media/svg/solid/money-bill-alt.svg" width="32px" height="32px" />
+						<h5 class="modal-title">Info o Bonusoch</h5>
+						<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-dark bg-light vstack gap-3 p-4 p-lg-5">
+						<ol class="list-group list-group-flush list-group-numbered rounded-3">
+							<li class="list-group-item">Dotácia na produkt vo výške až 1500€.</li>
+							<li class="list-group-item">Každý náš klient získa 200€ za každého klienta, ktorého nám odporučí.</li>
+							<li class="list-group-item">Za odporučenie klienta získate 100€, aj keď nie ste naším klientom.</li>
+						</ol>
+					</div>
+					<div class="modal-footer bg-light">
+						<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Zavrieť</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--  Progress Spinner  -->
+		<div id="fvSpinner" class="fade show position-fixed top-0 start-0 bottom-0 end-0" style="display:none;z-index:32767">
+			<div class="vstack gap-4 position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-75 p-5 rounded-3 shadow">
+				<div class="d-flex justify-content-center">
+					<div class="spinner-border text-white" role="status" style="width:100px;height:100px">
+						<span class="visually-hidden">Posielam požiadavku...</span>
+					</div>
+				</div>
+				<div class="text-white fs-4 fw-semibold mx-5">Posielam požiadavku...</div>
+			</div>
+		</div>
+		<!--  Form Result Dialog  -->
+		<div id="fvFormResultDialog" class="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content shadow">
+					<div class="modal-header bg-light border-0">
+						<img class="me-3" role="button" src="/fotovolt/media/svg/solid/info-circle.svg" width="32px" height="32px" />
+						<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-dark bg-light px-4 py-3">
+						<ul class="nav nav-tabs d-none" id="fvFormResultContent-tabs">
+							<li><a href="#fvFormResultContentOk-page" data-toggle="tab"></a></li>
+							<li><a href="#fvFormResultContentErr-page" data-toggle="tab"></a></li>
+						</ul>
+						<div class="tab-content" id="fvFormResultContent-pages">
+							<!--  Content Page Main  -->
+							<div class="tab-pane show active" id="fvFormResultContentOk-page" role="tabpanel" aria-labelledby="pages-main">
+								<div class="alert alert-light bg-transparent hstack gap-3 d-flex align-items-start" role="alert">
+									<div class="fs-2">👍</div>
+									<div>
+										<h4 class="alert-heading">Požiadavka doručená!</h4>
+										<div>Budeme Vás kontaktovať v najkratšom možnom čase.</div>
+									</div>
+								</div>
+							</div>
+							<!--  Content Page Main  -->
+							<div class="tab-pane" id="fvFormResultContentErr-page" role="tabpanel" aria-labelledby="pages-main">
+								<div class="alert alert-danger hstack gap-3 d-flex align-items-start" role="alert">
+									<div class="fs-2">☹️</div>
+									<div>
+										<h4 class="alert-heading">Došlo k chybe!</h4>
+										<div>Skúste Vašu požiadavku zopakovať.</div>
+										<hr class="mx-0 my-2 p-0" />
+										<div class="small">Zodpovedný človek bude prepustený.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer bg-light">
+						<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Zavrieť</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			const api     = 'https://script.google.com/macros/s/AKfycbxwXwUz-evrkih7n53VBmlEM3R-C2Is_rXrXEhADBn5ezvE2EQzPWwothOpxUiB665w/exec';
+			const storeID = 'dev.FotoVolt.userData';
+			const loader  = fvLoader();
+			const loc     = fvLocation();
+			var contractor;
+
+			function fvLocalStorage(sid='dev.FotoVolt.userData') {
+				var items = {};
+				const data = window.localStorage.getItem(sid);
+				if (data) {
+					try {
+						items = JSON.parse(data);
+					}
+					catch(err) {
+						items = {};
+					}
+				} else {
+					items = {};
+				}
+				return items;
+			};
+			function fvSID() {
+				const idKey = 'userID';
+				var store = fvLocalStorage(storeID);
+				if (idKey in store) {
+					return store[idKey];
+				} else {
+					const uid = Math.ceil((Date.now() - Date.parse('01 Jan 2022 00:00:00 GMT'))/100).toString(36);
+					store[idKey] = uid;
+					window.localStorage.setItem(storeID, JSON.stringify(store));
+					return uid;
+				}
+			}
+			function fvLocation() {
+				const ipService = 'geoiplookup.io';
+				var store = fvLocalStorage('dev.FotoVolt.userLocation');
+				if (ipService in store) {
+					return store[ipService];
+				} else {
+					$.getJSON('https://json.geoiplookup.io/', function(ipData) { 
+						if (ipData && 'success' in ipData && ipData.success == true) {
+							store[ipService] = ipData;
+							window.localStorage.setItem('dev.FotoVolt.userLocation', JSON.stringify(store));
+							return ipData;
+						}
+					});
+				}
+			};
+			function fvLoader() {
+				const inputs = new URLSearchParams(window.location.search);
+				const inputKeys = [...inputs.keys()];
+				const inputVals = [...inputs.values()];
+				const initIDs = (inputKeys.length > 0 && inputVals[0] == '') ? inputKeys[0] : '';
+				const initCmd = (inputKeys.length > 1 && inputVals[1] == '') ? inputKeys[1] : '';
+
+				if (initIDs == 'ls-reset') { window.localStorage.clear(); return; }
+				const parser = function(data, type) {
+					if (data.length < 4 || data[0] != type) return false;
+					const pars = data.slice(1).split('@');
+					if (pars.length == 1) {
+						if (pars[0].length == 3) {
+							loader.contractor = pars[0];
+						} else {
+							loader.referrer = pars[0];
+						}
+					} else {
+						loader.contractor = pars[0];
+						loader.referrer = pars[1];
+					}
+					return true;
+				};
+				const conKey = 'contractor';
+				const refKey = 'referrer';
+				var store  = fvLocalStorage(storeID);
+				var loader = { contractor : '', referrer : '', command : initCmd, connect : inputs.has('connect') ? inputs.get('connect') : ''};
+				if (conKey in store) {
+					loader.contractor = store[conKey];
+					if (refKey in store) loader.referrer = store[refKey];
+				} else {
+					if (parser(`?${initIDs}`, '?') === false) {
+						if (parser(window.location.hash.split('?')[0], '#') === false) { }
+					}
+				}
+				store[conKey] = loader.contractor;
+				store[refKey] = loader.referrer;
+				window.localStorage.setItem(storeID, JSON.stringify(store));
+				return loader;
+			}
+
+			$(function() {
+				const showPhoneDialog = () => { $('#contractorPhoneDialog').modal({}); $('#contractorPhoneDialog').modal('show'); };
+				const showEmailDialog = () => { $('#contractorEmailDialog').modal({}); $('#contractorEmailDialog').modal('show'); };
+				const connectRedirect = (url) => { window.location.href = url; };
+				$.getJSON(`${api}?action=con&id=${loader.contractor}`, function(data) {
+					contractor = data.contractor;
+					const sanPhone = contractor.phone.replace(/\s*/g, '');
+					const urlCall = () => { return `tel:${sanPhone}`;};
+					const urlSMS = () => { return `sms:${sanPhone}?body=FotoVolt: `;};
+					const urlWhatsApp = () => { return `https://wa.me/${sanPhone.slice(1)}?text=FotoVolt - záujem (referencia: ${fvSID()}):%0D`;};
+					const urlEmail = () => { return `mailto:${contractor.email}?subject=FotoVolt - záujem (referencia: ${fvSID()})&body=`;};
+					const urlGmail = () => { return `https://mail.google.com/mail/?view=cm&fs=1&to=${contractor.email}&su=FotoVolt - záujem (referencia: ${fvSID()})&body=`;};
+					$('#contractorID').html(contractor.id);
+					$('#contractorName').html(`${contractor.nameFirst} ${contractor.nameLast[0]}.`);
+					$('.fvContractorPhoneValue').html(contractor.phone);
+					$('#fvCallURL').attr('href', urlCall());
+					$('#fvSmsURL').attr('href', urlSMS());
+					$('#fvWhatsUpURL').attr('href', urlWhatsApp());
+					$('.fvContractorEmailValue').html(contractor.email);
+					$('#fvEmailURL').attr('href', urlEmail());
+					$('#fvGmailURL').attr('href', urlGmail());
+					$('.fvContractorMessengerValue').html(contractor.messenger);
+					$('.fvMessengerURL').attr('href', contractor.messenger);
+					$('#contractorPhoto').attr('src', `media/${contractor.id}.jpg`);
+					switch (loader.command) {
+						case 'phone':
+							showPhoneDialog(); break;
+						case 'email':
+							showEmailDialog(); break;
+						case 'call':
+							hit('call'); connectRedirect(urlCall()); break;
+						case 'sms':
+							hit('sms'); connectRedirect(urlSMS()); break;
+						case 'whatsapp':
+							hit('whatsup'); connectRedirect(urlWhatsApp()); break;
+						case 'emailapp':
+							hit('emailapp'); connectRedirect(urlEmail()); break;
+						case 'gmail':
+							hit('gmail'); connectRedirect(urlGmail()); break;
+					}
+				});
+				$('.fvContractorPhone').click(function() { showPhoneDialog(); });
+				$('#fvCallURL').click(function() { hit('call'); return true; });
+				$('#fvSmsURL').click(function() { hit('sms'); return true; });
+				$('#fvWhatsUpURL').click(function() { hit('whatsup'); return true; });
+				$('.fvContractorEmail').click(function() { showEmailDialog(); });
+				$('#fvEmailURL').click(function() { hit('emailapp'); return true; });
+				$('#fvGmailURL').click(function() { hit('gmail'); return true; });
+				$('.fvMessengerURL').click(function() { hit('messenger'); return true; });
+				$('.fvBonusInfoButton').click(function() { $('#fvBonusInfoDialog').modal({}); $('#fvBonusInfoDialog').modal('show'); });
+				$('.fvContactFormButton').click(function() {
+					const form = $(this).closest('form')[0];
+					if (!form.checkValidity()) {
+						event.preventDefault();
+						event.stopPropagation();
+					} else {
+						const inp = $('.fvContactInfo:visible:first', form);
+						const data = inp.val();
+						const type = $(form).attr('data-fv-contact-type');
+						const dialogs = $(this).closest('.fvDialog');
+						const dialog = (dialogs.length > 0) ? `#${$(dialogs[0]).attr('id')}` : '';
+						lead(type, data, dialog);
+					};
+					form.classList.add('was-validated');
+				});
+			});
+			function lead(type, data, dialogID) {
+				$('#fvSpinner').show();
+				rec(type, data, function(result) {
+					$('#fvSpinner').hide();
+					$('#fvFormResultDialog').modal({}); $('#fvFormResultDialog').modal('show');
+					const tab = `fvFormResultContent${(result.code == 0) ? 'Ok' : 'Err'}-page`;
+					$(`#fvFormResultContent-tabs a[href="#${tab}"]`).tab('show');
+					if (result.code == 0 && dialogID != '') $(dialogID).modal('hide');
+				});
+			}
+			function hit(media) {
+				rec(media, '', function(result) { });
+			}
+			function rec(media, contact, callback) {
+				const loc = fvLocation();
+				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&lon=${loc.longitude}`, function(data) { callback(data); });
+			}
+		</script>
+	</body>
+</html>
