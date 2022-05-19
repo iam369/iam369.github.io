@@ -771,7 +771,7 @@ html{ scroll-behavior:smooth; }
 		</div>
 		</footer>
 		<script type="text/javascript">
-			const api     = 'https://script.google.com/macros/s/AKfycbxwXwUz-evrkih7n53VBmlEM3R-C2Is_rXrXEhADBn5ezvE2EQzPWwothOpxUiB665w/exec';
+			const api     = 'https://script.google.com/macros/s/AKfycbz_SI5dbrMKEhi8RTu5JRjDJt-tFE2g2i9h28BnRn2DKnGRpQa5oLivRILTVtKhMUj7/exec';
 			const storeID = 'dev.FotoVolt.userData';
 			const loader  = fvLoader();
 			const loc     = fvLocation();
@@ -844,8 +844,9 @@ html{ scroll-behavior:smooth; }
 				};
 				const conKey = 'contractor';
 				const refKey = 'referrer';
+				const funKey = 'funnel';
 				var store  = fvLocalStorage(storeID);
-				var loader = { contractor : '', referrer : '', command : initCmd, connect : inputs.has('connect') ? inputs.get('connect') : ''};
+				var loader = { contractor : '', referrer : '', command : initCmd, funnel : inputs.has('fun') ? inputs.get('fun') : ''};
 				if (conKey in store) {
 					loader.contractor = store[conKey];
 					if (refKey in store) loader.referrer = store[refKey];
@@ -856,6 +857,7 @@ html{ scroll-behavior:smooth; }
 				}
 				store[conKey] = loader.contractor;
 				store[refKey] = loader.referrer;
+				store[funKey] = loader.funnel;
 				window.localStorage.setItem(storeID, JSON.stringify(store));
 				return loader;
 			}
@@ -943,7 +945,7 @@ html{ scroll-behavior:smooth; }
 			}
 			function rec(media, contact, callback) {
 				const loc = fvLocation();
-				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&lon=${loc.longitude}`, function(data) { callback(data); });
+				$.getJSON(`${api}?action=lead&con=${contractor.id}&ref=${contractor.refID}&uid=${fvSID()}&aff=${loader.referrer}&fun=${loader.funnel}&media=${media}&email=${(media == 'email') ? contact : ''}&phone=${(media == 'phone') ? contact : ''}&cit=${loc.city}&reg=${loc.region}&zip=${loc.postal_code}&cty=${loc.country_code}&lat=${loc.latitude}&lon=${loc.longitude}`, function(data) { callback(data); });
 			}
 		</script>
 	</body>

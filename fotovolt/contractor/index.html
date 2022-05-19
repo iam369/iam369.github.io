@@ -18,11 +18,16 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient text-white mb-4">
 			<div class="container">
 				<div id="contractorName" class="fs-2 fw-bold text-nowrap"></div>
-				<div id="contractorID" class="fs-2 fw-bold text-nowrap"></div>
+				<div>ID: <span id="contractorID" class="fs-2 fw-bold text-nowrap"></span></div>
 			</div>
 		</nav>
 		<div class="container mb-4">
-			<h1>Links &amp; QR Codes</h1>
+			<h1>Linky &amp; QR Kódy</h1>
+			<hr class="mz-3" />
+			<div class="input-group">
+				<span class="input-group-text" id="basic-addon1">Funnel</span>
+				<input id="fvFunnelID" type="text" class="form-control">
+			</div>
 			<hr class="mb-4" />
 			<div class="vstack gap-3">
 				<div>
@@ -138,7 +143,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			const api = 'https://script.google.com/macros/s/AKfycbxwXwUz-evrkih7n53VBmlEM3R-C2Is_rXrXEhADBn5ezvE2EQzPWwothOpxUiB665w/exec';
+			const api = 'https://script.google.com/macros/s/AKfycbz_SI5dbrMKEhi8RTu5JRjDJt-tFE2g2i9h28BnRn2DKnGRpQa5oLivRILTVtKhMUj7/exec';
 			const domain = 'iam369.github.io/fotovolt';
 			const inputs = new URLSearchParams(window.location.search);
 			$(function() {
@@ -173,23 +178,30 @@
 				$('.fvLinkQRImageDL').click(function() {
 					$(this).attr('href', qrGenerator($('#fvLinkQRImage').attr('data-fv-qr-target'), $(this).attr('data-fv-qr-size'), $(this).attr('data-fv-qr-format'))); return true;
 				});
+				$("#fvFunnelID").on('input', function() {
+					updateLinks();
+				});
 				const qrGenerator = (url, size='300', format='png') => {
 					return `https://image-charts.com/chart?cht=qr&chs=${size}x${size}&icqrb=FFFFFF&icqrf=000000&chld=M|4&choe=UTF-8&chof=.${format}&chl=${encodeURIComponent(url)}`;
 				}
+				const updateLinks = () => {
+					var fid = $('#fvFunnelID').val();
+					fid = (fid != '') ? `&fun=${fid}` : '';
 
+					$('#fvLinkMain').val(`https://${domain}/?${contractor.id}${fid}`);
+					$('#fvLinkOpenPhone').val(`https://${domain}/?${contractor.id}&phone${fid}`);
+					$('#fvLinkOpenEmail').val(`https://${domain}/?${contractor.id}&email${fid}`);
+					$('#fvLinkDoCall').val(`https://${domain}/?${contractor.id}&call${fid}`);
+					$('#fvLinkDoSMS').val(`https://${domain}/?${contractor.id}&sms${fid}`);
+					$('#fvLinkDoWhatsApp').val(`https://${domain}/?${contractor.id}&whatsapp${fid}`);
+					$('#fvLinkDoEmail').val(`https://${domain}/?${contractor.id}&emailapp${fid}`);
+					$('#fvLinkDoGmail').val(`https://${domain}/?${contractor.id}&gmail${fid}`);
+				};
 				$.getJSON(`${api}?action=cont&id=${inputs.get('id')}`, function(data) {
 					contractor = data.contractor;
 					$('#contractorID').html(contractor.id);
 					$('#contractorName').html(`${contractor.nameFirst} ${contractor.nameLast}`);
-
-					$('#fvLinkMain').val(`https://${domain}/?${contractor.id}`);
-					$('#fvLinkOpenPhone').val(`https://${domain}/?${contractor.id}&phone`);
-					$('#fvLinkOpenEmail').val(`https://${domain}/?${contractor.id}&email`);
-					$('#fvLinkDoCall').val(`https://${domain}/?${contractor.id}&call`);
-					$('#fvLinkDoSMS').val(`https://${domain}/?${contractor.id}&sms`);
-					$('#fvLinkDoWhatsApp').val(`https://${domain}/?${contractor.id}&whatsapp`);
-					$('#fvLinkDoEmail').val(`https://${domain}/?${contractor.id}&emailapp`);
-					$('#fvLinkDoGmail').val(`https://${domain}/?${contractor.id}&gmail`);
+					updateLinks();
 				});
 			});
 		</script>
