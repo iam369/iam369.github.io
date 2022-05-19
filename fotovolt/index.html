@@ -888,9 +888,9 @@ html{ scroll-behavior:smooth; }
 					$('#contractorPhoto').attr('src', `media/${contractor.id}.jpg`);
 					switch (loader.command) {
 						case 'phone':
-							showPhoneDialog(); break;
+							showContactDialog('phone'); break;
 						case 'email':
-							showEmailDialog(); break;
+							showContactDialog('email'); break;
 						case 'call':
 							hit('call'); connectRedirect(urlCall()); break;
 						case 'sms':
