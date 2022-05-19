@@ -68,10 +68,200 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.lfo-fs-85 { font-size: 85% }
 .lfoseo { display: inline-block; width: var(--lfo-mobile-seo-value); height: var(--lfo-mobile-seo-value); overflow: hidden; position: absolute; }
+.nav-pills .nav-link.active .link-dark { color: #ddd }
 :target::before { content: ""; display: block; height: 72px; margin: -72px 0 0; }
 		</style>
-
+		<!--  PWA  -->
+		<link rel="manifest" href="/manifest.webmanifest">
+		<meta name="application-name" content="Sun Pixel">
+		<link rel="icon" sizes="192x192" href="/media/app/sunpixel-app-icon-192.png">
+		<meta name="theme-color" content="#d89838">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="white">
+		<meta name="apple-mobile-web-app-title" content="Sun Pixel">
+		<link rel="apple-touch-icon" href="/media/app/sunpixel-app-icon-180.png">
+		<link rel="apple-touch-startup-image" href="/media/app/sunpixel-launch-1242x2688.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="/media/app/sunpixel-launch-1242x2688.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-828x1792.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/media/app/sunpixel-launch-1125x2436.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="/media/app/sunpixel-launch-1242x2208.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-750x1334.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-2048x2732.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-1668x2388.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-1668x2224.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="/media/app/sunpixel-launch-1536x2048.png">
+		<meta name="msapplication-TileImage" content="/media/app/sunpixel-app-icon-144.png">
+		<meta name="msapplication-TileColor" content="#181818">
+		<!--  Schema.org  -->
+		<script type="application/ld+json">{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"@id": "http://organization.fotovolt.solar",
+			"name": "Sun Pixel",
+			"alternateName": "Sun Pixel Photography",
+			"slogan": "Nice photo gallery for eyes, screens and prints",
+			"description": "Sun Pixel is a photography showcase of one photo enthusiast and occassional traveller. It brings you nice photos for your eyes, screens and prints.",
+			"url": "https://fotovolt.solar",
+			"logo": {
+				"@type": "ImageObject",
+				"@id": "http://images.fotovolt.solar/logo/",
+				"url": "https://fotovolt.solar/media/app/sunpixel-logo-1024.webp",
+				"caption": "Sun Pixel"
+			},
+			"image": {
+				"@type": "ImageObject",
+				"@id": "http://images.fotovolt.solar/image/",
+				"url": "https://fotovolt.solar/media/app/sunpixel-logo-4096.webp",
+				"caption": "Sun Pixel Nice photo gallery for eyes, screens and prints"
+			},
+			"brand": {
+				"@type": "Brand",
+				"@id": "http://brand.fotovolt.solar",
+				"name": "Sun Pixel",
+				"slogan": "Nice photo gallery for eyes, screens and prints",
+				"logo": {
+					"@id": "http://images.fotovolt.solar/logo/"
+				}
+			},
+			"founder": {
+				"@type": "Person",
+				"name": "Lubos Tilka"
+			},
+			"foundingDate": "2021-10-18",
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"bestRating": 5,
+				"worstRating": 1,
+				"ratingCount": 21521,
+				"ratingValue": 4.93
+			},
+			"knowsLanguage": [
+				{
+					"@type": "Language",
+					"name": "English",
+					"alternateName": "en"
+				},
+				{
+					"@type": "Language",
+					"name": "Slovak",
+					"alternateName": "sk"
+				},
+				{
+					"@type": "Language",
+					"name": "Czech",
+					"alternateName": "cz"
+				}
+			],
+			"sameAs": [
+				"https://www.facebook.com/SunPixelPhotography",
+				"https://www.instagram.com/sunpixelphotography/",
+				"https://www.twitter.com/SunPixelPhoto",
+				"https://www.pinterest.com/sunpixelphotography/",
+				"https://sunpixelphotography.tumblr.com/",
+				"https://imgur.com/user/SunPixelPhotography",
+				"http://www.flickr.com/photos/sunpixelphotography",
+				"http://www.youtube.com/channel/[dev]]?sub_confirmation=1",
+				"https://www.tiktok.com/@sunpixelphotography"
+			],
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"url": "https://fotovolt.solar",
+				"email": "info(at)fotovolt.solar",
+				"contactType": "Customer service"
+			},
+			"knowsAbout": "landscape,seascape,cityscape,nature,art,night,black & white,macro,people,still life",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Sun Pixel Products",
+				"itemListElement": [
+					"Landscape",
+					"Seascape",
+					"Cityscape",
+					"Nature",
+					"Art",
+					"Night",
+					"Black & White",
+					"Macro",
+					"People",
+					"Still Life"
+				]
+			}
+		}
+		</script>
+		<script type="application/ld+json">{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"@id": "http://website.fotovolt.solar",
+			"name": "Sun Pixel",
+			"alternateName": "Sun Pixel Photography",
+			"description": "Nice photo gallery for eyes, screens and prints",
+			"url": "https://fotovolt.solar",
+			"publisher": {
+				"@id": "http://organization.fotovolt.solar"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://fotovolt.solar/search/?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"inLanguage": {
+				"@type": "Language",
+				"name": "English",
+				"alternateName": "en"
+			}
+		}
+		</script>
+		<script type="application/ld+json">{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"@id": "https://fotovolt.solar/#breadcrumb",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"item": {
+						"@type": "WebPage",
+						"@id": "https://fotovolt.solar/",
+						"url": "https://fotovolt.solar/",
+						"name": "Sun Pixel"
+					}
+				}
+			]
+		}
+		</script>
+		<script type="application/ld+json">{
+			"@context": "http://schema.org",
+			"@type": "WebPage",
+			"@id": "http://webpages.fotovolt.solar/",
+			"url": "https://fotovolt.solar/",
+			"name": "Sun Pixel Photography | Nice photo gallery for eyes, screens and prints",
+			"description": "Sun Pixel is a photography showcase of one photo enthusiast and occassional traveller. It brings you nice photos for your eyes, screens and prints.",
+			"isPartOf": {
+				"@id": "http://website.fotovolt.solar"
+			},
+			"datePublished": "2022-03-13T12:49:25.141Z",
+			"dateModified": "2022-03-13T12:49:25.141Z",
+			"inLanguage": {
+				"@type": "Language",
+				"name": "English",
+				"alternateName": "en"
+			},
+			"breadcrumb": {
+				"@id": "https://fotovolt.solar/#breadcrumb"
+			},
+			"potentialAction": [
+				{
+					"@type": "ReadAction",
+					"target": [
+						"https://fotovolt.solar/"
+					]
+				}
+			]
+		}
+		</script>
 	</head>
 	<body class="bg-white text-black link-primary" data-bs-spy="scroll" data-bs-target="#fvNavBar" data-bs-offset="72" tabindex="0">
 		<header style="height:72px">
@@ -89,16 +279,16 @@
 							<div>
 								<ul class="nav nav-pills">
 									<li class="nav-item">
-										<a class="nav-link" href="#o-nas">Kto sme?</a>
+										<a class="nav-link text-center lh-sm" href="#o-nas">Kto sme?<br /><span class="link-dark lfo-fs-85">&nbsp;</span></a>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#produkty">Čo ponúkame?</a>
+									<li class="nav-item text-center lh-sm">
+										<a class="nav-link" href="#fotovoltika">Čo ponúkame?<br /><span class="link-dark lfo-fs-85">Fotovoltiku</span></a>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#usetrite">Ušetrite za elektrinu!</a>
+									<li class="nav-item text-center lh-sm">
+										<a class="nav-link" href="#usetrite">Ušetrite za elektrinu!<br /><span class="link-dark lfo-fs-85">aj za plyn</span></a>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#kontakt">Kontakt</a>
+									<li class="nav-item text-center lh-sm">
+										<a class="nav-link" href="#kontakt">Kontakt<br /><span class="link-dark lfo-fs-85">audit zadarmo</span></a>
 									</li>
 								</ul>
 							</div>
@@ -133,7 +323,7 @@
 				</div>
 			</section>
 			<!--  Products  -->
-			<section id="produkty" class="mb-5 parallax">
+			<section id="fotovoltika" class="mb-5 parallax">
 				<h2 class="lfoseo">Fotovoltické riešenia a produkty</h2>
 				<div class="container-fluid bg-dark bg-opacity-75">
 					<div class="container g-0">
@@ -401,71 +591,80 @@
 					</div>
 				</div>
 			</section>
-			<!--  Contractor Phone Dialog  -->
-			<div id="contractorPhoneDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<!--  Contact Dialog  -->
+			<div id="fvContactDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-scrollable">
 					<div class="modal-content shadow">
 						<div class="modal-header bg-primary text-white">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/phone-rotary.svg" width="32" height="32" />
-							<h5 class="modal-title">Kontakt cez telefón</h5>
+							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/address-card.svg" width="32" height="32" />
+							<h5 class="modal-title">FotoVolt - Kontakt</h5>
 							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<div class="modal-body text-dark bg-light vstack gap-3 px-4 py-2 p-lg-5 text-center">
-							<div>
-								<div class="fs-4 fw-bold">Zavoláme Vám:</div>
-								<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
-								<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
-									<div class="input-group">
-										<span class="input-group-text">+421</span>
-										<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
-										<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+						<div class="modal-body text-dark bg-light _px-4 _py-2 p-sm-3 p-md-4 p-lg-5 text-center">
+							<ul class="nav nav-tabs nav-justified mb-4" id="fvContactDialogTabs" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="fvContactDialogTab-phone" data-bs-toggle="tab" data-bs-target="#contact-phone" type="button" role="tab" aria-controls="contact-phone" aria-selected="true">Telefón</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="fvContactDialogTab-email" data-bs-toggle="tab" data-bs-target="#contact-email" type="button" role="tab" aria-controls="contact-email" aria-selected="false">E-mail</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="fvContactDialogTab-messenger" data-bs-toggle="tab" data-bs-target="#contact-messenger" type="button" role="tab" aria-controls="contact-messenger" aria-selected="false">Messenger</button>
+								</li>
+							</ul>
+							<div class="tab-content" id="fvContactDialogContent">
+								<div class="vstack gap-3 tab-pane fade show active" id="contact-phone" role="tabpanel" aria-labelledby="fvContactDialogTab-phone">
+									<div>
+										<div class="fs-4 fw-bold">Zavoláme Vám:</div>
+										<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+										<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
+											<div class="input-group">
+												<span class="input-group-text">+421</span>
+												<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
+												<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+											</div>
+										</form>
 									</div>
-								</form>
-							</div>
-							<div><hr /></div>
-							<div>
-								<div class="fs-6">alebo kontaktujte</div>
-								<div class="fvContractorPhoneValue fs-4 fw-bold mb-3"></div>
-								<div class="d-flex flex-wrap justify-content-center">
-									<a id="fvCallURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Zavolať na číslo" target="_blank" rel="external noopener">Zavolať</a>
-									<a id="fvSmsURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať SMS správu" target="_blank" rel="external noopener">SMS</a>
-									<a id="fvWhatsUpURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez WhatsApp" target="_blank" rel="external noopener">WhatsApp</a>
+									<div><hr /></div>
+									<div>
+										<div class="fs-6">alebo kontaktujte</div>
+										<div class="fvContractorPhoneValue fs-4 fw-bold mb-3"></div>
+										<div class="d-flex flex-wrap justify-content-center">
+											<a id="fvCallURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Zavolať na číslo" target="_blank" rel="external noopener">Zavolať</a>
+											<a id="fvSmsURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať SMS správu" target="_blank" rel="external noopener">SMS</a>
+											<a id="fvWhatsUpURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez WhatsApp" target="_blank" rel="external noopener">WhatsApp</a>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="modal-footer bg-light">
-							<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Zavrieť</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--  Contractor Email Dialog  -->
-			<div id="contractorEmailDialog" class="fvDialog modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-scrollable">
-					<div class="modal-content shadow">
-						<div class="modal-header bg-primary text-white">
-							<img class="me-3" role="button" src="/fotovolt/media/svg/solid/envelope.svg" width="32" height="32" />
-							<h5 class="modal-title">Kontakt cez e-mail</h5>
-							<button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body text-dark bg-light vstack gap-3 px-4 py-2 p-lg-5 text-center">
-							<div>
-								<div class="fs-4 fw-bold">Pošleme Vám e-mail:</div>
-								<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
-								<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
-									<div class="input-group">
-										<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
-										<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+								<div class="vstack gap-3 tab-pane fade" id="contact-email" role="tabpanel" aria-labelledby="fvContactDialogTab-email">
+									<div>
+										<div class="fs-4 fw-bold">Pošleme Vám e-mail:</div>
+										<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+										<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
+											<div class="input-group">
+												<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
+												<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+											</div>
+										</form>
 									</div>
-								</form>
-							</div>
-							<div><hr /></div>
-							<div>
-								<div class="fs-6">alebo pošlite e-mail na</div>
-								<div class="fvContractorEmailValue fs-4 fw-bold mb-3"></div>
-								<div class="d-flex flex-wrap justify-content-center">
-									<a id="fvEmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez predvolenú e-mail aplikáciu" target="_blank" rel="external noopener">E-mail App</a>
-									<a id="fvGmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez Gmail" target="_blank" rel="external noopener">Gmail</a>
+									<div><hr /></div>
+									<div>
+										<div class="fs-6">alebo pošlite e-mail na</div>
+										<div class="fvContractorEmailValue fs-4 fw-bold mb-3"></div>
+										<div class="d-flex flex-wrap justify-content-center">
+											<a id="fvEmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez predvolenú e-mail aplikáciu" target="_blank" rel="external noopener">E-mail App</a>
+											<a id="fvGmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez Gmail" target="_blank" rel="external noopener">Gmail</a>
+										</div>
+									</div>
+								</div>
+								<div class="vstack gap-3 tab-pane fade" id="contact-messenger" role="tabpanel" aria-labelledby="fvContactDialogTab-messenger">
+									<div>
+										<div class="fs-6">pošlite správu na</div>
+										<div class="fvContractorMessengerValue fs-4 fw-bold mb-3"></div>
+										<div class="d-flex flex-wrap justify-content-center">
+											<a href="#" class="fvMessengerURL btn btn-warning btn-lg px-4 mx-2" _role="button" target="_blank" rel="external noopener">Messenger</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -555,7 +754,6 @@
 		</main>
 		<footer class="container-fluid bg-dark text-light">
 			<div class="container g-0 py-4 py-md-5">
-				
 			</div>
 		</div>
 		</footer>
@@ -650,8 +848,10 @@
 			}
 
 			$(function() {
-				const showPhoneDialog = () => { $('#contractorPhoneDialog').modal({}); $('#contractorPhoneDialog').modal('show'); };
-				const showEmailDialog = () => { $('#contractorEmailDialog').modal({}); $('#contractorEmailDialog').modal('show'); };
+				const showContactDialog = (type='phone') => {
+					$('#fvContactDialog').modal({}); $('#fvContactDialog').modal('show');
+					$(`#fvContactDialogTab-${type}`).tab('show');
+				};
 				const connectRedirect = (url) => { window.location.href = url; };
 				$.getJSON(`${api}?action=con&id=${loader.contractor}`, function(data) {
 					contractor = data.contractor;
@@ -690,11 +890,11 @@
 							hit('gmail'); connectRedirect(urlGmail()); break;
 					}
 				});
-				$('.fvContractorPhone').click(function() { showPhoneDialog(); });
+				$('.fvContractorPhone').click(function() { showContactDialog('phone'); });
 				$('#fvCallURL').click(function() { hit('call'); return true; });
 				$('#fvSmsURL').click(function() { hit('sms'); return true; });
 				$('#fvWhatsUpURL').click(function() { hit('whatsup'); return true; });
-				$('.fvContractorEmail').click(function() { showEmailDialog(); });
+				$('.fvContractorEmail').click(function() { showContactDialog('email'); });
 				$('#fvEmailURL').click(function() { hit('emailapp'); return true; });
 				$('#fvGmailURL').click(function() { hit('gmail'); return true; });
 				$('.fvMessengerURL').click(function() { hit('messenger'); return true; });
