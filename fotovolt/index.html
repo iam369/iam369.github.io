@@ -620,56 +620,62 @@ html{ scroll-behavior:smooth; }
 								</li>
 							</ul>
 							<div class="tab-content" id="fvContactDialogContent">
-								<div class="vstack gap-3 tab-pane fade show active" id="contact-phone" role="tabpanel" aria-labelledby="fvContactDialogTab-phone">
-									<div>
-										<div class="fs-4 fw-bold">Zavoláme Vám:</div>
-										<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
-										<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
-											<div class="input-group">
-												<span class="input-group-text">+421</span>
-												<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
-												<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+								<div class="tab-pane fade show active" id="contact-phone" role="tabpanel" aria-labelledby="fvContactDialogTab-phone">
+									<div class="vstack gap-3">
+										<div>
+											<div class="fs-4 fw-bold">Zavoláme Vám:</div>
+											<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+											<form data-fv-contact-type="phone" class="fvContactForm needs-validation" novalidate>
+												<div class="input-group">
+													<span class="input-group-text">+421</span>
+													<input type="tel" pattern="[0-9/\s]{8,24}" onkeypress="return /[\d/\s]/.test(String.fromCharCode(event.keyCode || event.which))" class="fvContactInfo form-control form-control-lg" placeholder="Vaše telefónne číslo" aria-label="Telefónne číslo" minlength="9" maxlength="24" required>
+													<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+												</div>
+											</form>
+										</div>
+										<div><hr /></div>
+										<div>
+											<div class="fs-6">alebo kontaktujte</div>
+											<div class="fvContractorPhoneValue fs-4 fw-bold mb-3"></div>
+											<div class="d-flex flex-wrap justify-content-center">
+												<a id="fvCallURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Zavolať na číslo" target="_blank" rel="external noopener">Zavolať</a>
+												<a id="fvSmsURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať SMS správu" target="_blank" rel="external noopener">SMS</a>
+												<a id="fvWhatsUpURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez WhatsApp" target="_blank" rel="external noopener">WhatsApp</a>
 											</div>
-										</form>
-									</div>
-									<div><hr /></div>
-									<div>
-										<div class="fs-6">alebo kontaktujte</div>
-										<div class="fvContractorPhoneValue fs-4 fw-bold mb-3"></div>
-										<div class="d-flex flex-wrap justify-content-center">
-											<a id="fvCallURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Zavolať na číslo" target="_blank" rel="external noopener">Zavolať</a>
-											<a id="fvSmsURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať SMS správu" target="_blank" rel="external noopener">SMS</a>
-											<a id="fvWhatsUpURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez WhatsApp" target="_blank" rel="external noopener">WhatsApp</a>
 										</div>
 									</div>
 								</div>
-								<div class="vstack gap-3 tab-pane fade" id="contact-email" role="tabpanel" aria-labelledby="fvContactDialogTab-email">
-									<div>
-										<div class="fs-4 fw-bold">Pošleme Vám e-mail:</div>
-										<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
-										<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
-											<div class="input-group">
-												<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
-												<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+								<div class="tab-pane fade" id="contact-email" role="tabpanel" aria-labelledby="fvContactDialogTab-email">
+									<div class="vstack gap-3">
+										<div>
+											<div class="fs-4 fw-bold">Pošleme Vám e-mail:</div>
+											<div class="mb-3 fs-6">a získate možnosť zaujímavých <a class="fvBonusInfoButton link-primary" href="#" title="Info o Bonusoch">bonusov</a>.</div>
+											<form data-fv-contact-type="email" class="fvContactForm needs-validation" novalidate>
+												<div class="input-group">
+													<input type="email" class="fvContactInfo form-control form-control-lg" placeholder="Váš e-mail" aria-label="E-mail" minlength="6" maxlength="64" required>
+													<button type="button" class="fvContactFormButton btn btn-lg btn-warning px-3">Odoslať</button>
+												</div>
+											</form>
+										</div>
+										<div><hr /></div>
+										<div>
+											<div class="fs-6">alebo pošlite e-mail na</div>
+											<div class="fvContractorEmailValue fs-4 fw-bold mb-3"></div>
+											<div class="d-flex flex-wrap justify-content-center">
+												<a id="fvEmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez predvolenú e-mail aplikáciu" target="_blank" rel="external noopener">E-mail App</a>
+												<a id="fvGmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez Gmail" target="_blank" rel="external noopener">Gmail</a>
 											</div>
-										</form>
-									</div>
-									<div><hr /></div>
-									<div>
-										<div class="fs-6">alebo pošlite e-mail na</div>
-										<div class="fvContractorEmailValue fs-4 fw-bold mb-3"></div>
-										<div class="d-flex flex-wrap justify-content-center">
-											<a id="fvEmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez predvolenú e-mail aplikáciu" target="_blank" rel="external noopener">E-mail App</a>
-											<a id="fvGmailURL" class="btn btn-warning btn-lg px-4 mx-2 mb-2" href="#" title="Poslať správu cez Gmail" target="_blank" rel="external noopener">Gmail</a>
 										</div>
 									</div>
 								</div>
-								<div class="vstack gap-3 tab-pane fade" id="contact-messenger" role="tabpanel" aria-labelledby="fvContactDialogTab-messenger">
-									<div>
-										<div class="fs-6">pošlite správu na</div>
-										<div class="fvContractorMessengerValue fs-4 fw-bold mb-3"></div>
-										<div class="d-flex flex-wrap justify-content-center">
-											<a href="#" class="fvMessengerURL btn btn-warning btn-lg px-4 mx-2" _role="button" target="_blank" rel="external noopener">Messenger</a>
+								<div class="tab-pane fade" id="contact-messenger" role="tabpanel" aria-labelledby="fvContactDialogTab-messenger">
+									<div class="vstack gap-3">
+										<div>
+											<div class="fs-6">pošlite správu na</div>
+											<div class="fvContractorMessengerValue fs-4 fw-bold mb-3"></div>
+											<div class="d-flex flex-wrap justify-content-center">
+												<a href="#" class="fvMessengerURL btn btn-warning btn-lg px-4 mx-2" _role="button" target="_blank" rel="external noopener">Messenger</a>
+											</div>
 										</div>
 									</div>
 								</div>
