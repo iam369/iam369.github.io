@@ -69,10 +69,11 @@
 	background-size: cover;
 }
 .lfo-fs-85 { font-size: 85% }
+.lfo-text-shadow { text-shadow: 0px 0px 6px #000000 }
 .lfoseo { display: inline-block; width: var(--lfo-mobile-seo-value); height: var(--lfo-mobile-seo-value); overflow: hidden; position: absolute; }
 .nav-pills .nav-link.active .link-dark { color: #ddd }
 html{ scroll-behavior:smooth; }
-:target::before { content: ""; display: block; height: 72px; margin: -72px 0 0; }
+:target::before { content: ""; display: block; height: 89px; margin: -89px 0 0; }
 		</style>
 		<!--  PWA  -->
 		<link rel="manifest" href="/manifest.webmanifest">
@@ -264,13 +265,13 @@ html{ scroll-behavior:smooth; }
 		}
 		</script>
 	</head>
-	<body class="bg-white text-black link-primary" data-bs-spy="scroll" data-bs-target="#fvNavBar" data-bs-offset="72" tabindex="0">
-		<header style="height:72px;max-height:72px">
+	<body class="bg-white text-black link-primary" data-bs-spy="scroll" data-bs-target="#fvNavBar" data-bs-offset="89" tabindex="0">
+		<header style="height:89px;max-height:89px">
 			<nav id="fvNavBar" class="container-fluid navbar navbar-expand-lg fixed-top navbar-light bg-white">
 				<div class="container g-0">
 					<a class="navbar-brand hstack gap-3 me-4" href="/">
-						<img src="/fotovolt/media/fotovolt-solar-logo.png" alt="Fotovoltika" width="40" height="40">
-						<span class="text-uppercase fs-4 fw-bold m-0 p-0">Fotovoltika</span>
+						<img src="media/fotovolt-solar-logo-full.png" alt="Fotovoltika" height="63">
+						<!--span class="text-uppercase fs-4 fw-bold m-0 p-0">Fotovoltika</span-->
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fvNavBarCollapse" aria-controls="fvNavBarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -311,22 +312,32 @@ html{ scroll-behavior:smooth; }
 		</header>
 		<main id="o-nas">
 			<!--  Products  -->
-			<section class="mb-5">
+			<section class="_mb-5">
 				<h1 class="lfoseo">Kompletné fotovoltické riešenia na kľúč</h1>
 				<p class="lfoseo">TODO</p>
-				<div class="container-fluid">
-					<div class="container g-0">
-						<div class="d-flex flex-wrap flex-md-nowrap pt-3">
-							<div class="fs-2 fw-bold text-uppercase text-nowrap pt-0 pb-1 my-0 me-4">Kto sme?</div>
-							<div>Sme súčasťou spoločnosti Národný Energetický Projekt, dodávateľa kompletných solárnych riešení. Našou hlavnou špecializáciou sú fotovoltické inštalácie pre domy, firmy a farmy. Našou špecialitou je komplexný zákaznícky servis, profesionálny dizajn, získanie finančných prostriedkov EÚ, montáž na najvyššej úrovni a servisná starostlivosť.</div>
+				<div class="container-fluid px-0">
+					<div class="container-fluid">
+						<div class="container g-0">
+							<div class="d-flex flex-column flex-md-row">
+								<div class="order-1 order-md-0 col-12 col-md-6 bg-white mb-4 mb-md-5 pe-3">
+									<div class="fs-2 fw-bold text-uppercase text-nowrap pt-3 pb-1 my-0 me-4">Kto sme?</div>
+									<div>Sme súčasťou spoločnosti Národný Energetický Projekt, dodávateľa kompletných solárnych riešení. Našou hlavnou špecializáciou sú fotovoltaické inštalácie pre domácnosti, firmy a farmy. Ponúkame komplexný zákaznícky servis, profesionálny dizajn, získavanie finančných prostriedkov EÚ, montáž na najvyššej úrovni a servisná starostlivosť.</div>
+								</div>
+								<div class="order-0 order-md-1 col-12 col-md-6 bg-transparent d-flex parallax">
+									<div class="vstack gap-2 text-center text-white lfo-text-shadow px-3 py-3 my-auto">
+										<div class="fs-5">Zelená energia dostupná pre každého</div>
+										<div class="fs-3 fw-bold">Znížime vám účty za elektrinu</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!--  Products  -->
 			<section id="fotovoltika">
-				<div class="container-fluid px-0 mb-5 parallax">
-					<h2 class="lfoseo">Fotovoltické riešenia a produkty</h2>
+				<h2 class="lfoseo">Fotovoltické riešenia a produkty</h2>
+				<div class="container-fluid px-0 parallax mb-4 mb-md-5">
 					<div class="container-fluid bg-dark bg-opacity-75">
 						<div class="container g-0">
 							<div class="row row-cols-1 row-cols-md-2 g-0">
@@ -343,72 +354,112 @@ html{ scroll-behavior:smooth; }
 						<div class="container g-0">
 							<div class="row g-0">
 								<div class="col-12 col-md-6 bg-transparent"></div>
-								<div class="col-12 col-md-6">
-									<div class="vstack gap-3 p-3 bg-white">
+								<div class="col-12 col-md-6 bg-white border-bottom">
+									<div class="vstack gap-3 p-3">
+										<div>
+											<div class="text-center fw-bold">Získajte viac energie a plaťte menej.</div>
+											<div class="text-center">Pripravíme vám ponuku na mieru a zabezpečíme celú realizáciu.</div>
+										</div>
 										<ul class="list-group list-group-flush text-center">
-											<li class="list-group-item"><a class="link-primary" href="#kontakt" title="Požiadajte o energetický audit zadarmo"><b><span class="lfoseo">Energetický</span></Energetick> Audit zadarmo</b></a></li>
-											<li class="list-group-item">Návrh solárnych zariadení</li>
-											<li class="list-group-item">Vybavenie dotácií a financovania</li>
-											<li class="list-group-item">Dodávka a montáž solárnej elektrárne</li>
+											<li class="list-group-item text-wrap lm-sm"><a class="link-primary text-decoration-none" href="#kontakt" title="Požiadajte o energetický audit zadarmo"><b><span class="lfoseo">Energetický</span></Energetick> Audit zadarmo</b></a></li>
+											<li class="list-group-item dropdown">
+												<a data-bs-toggle="collapse" class="dropdown-toggle link-dark text-decoration-none" href="#fvSolutionDesign">
+													<span class="me-1 text-wrap lm-sm">Návrh solárnych zariadení</span>
+												</a>
+												<div id="fvSolutionDesign" class="collapse my-2">
+													Po audite naše projekčné oddelenie vypracuje individuálny projekt solárnej elektrárne, ktorý zabezpečí maximálny úžitok z investície - zvolí sa vhodný výkon fotovoltického zariadenia a určí sa jeho umiestnenie.
+												</div>
+											</li>
+											<li class="list-group-item dropdown">
+												<a data-bs-toggle="collapse" class="dropdown-toggle link-dark text-decoration-none" href="#fvSolutionFinances">
+													<span class="me-1 text-wrap lm-sm">Vybavenie dotácií a financovania</span>
+												</a>
+												<div id="fvSolutionFinances" class="collapse my-2">
+													<div class="mb-2">Zjednodušujeme celý proces. Navrhneme najlepšiu formu financovania: predplatné, hotovosť alebo leasing. Zabezpečíme vám výhodné financovanie s najlepšími na trhu.</div>
+													<div class="d-flex flex-wrap justify-content-between">
+														<div class="hstack gap-2 text-center me-4">
+															<div><img src="/fotovolt/media/financovanie-homecredit.png" height="28" alt="Financovanie cez Homecredit"></div>
+															<div>Homecredit</div>
+														</div>
+														<div class="hstack gap-2 text-center me-4">
+															<div><img src="/fotovolt/media/financovanie-zinceuro.png" height="28" alt="Financovanie cez ZincEuro"></div>
+															<div>ZincEuro</div>
+														</div>
+														<div class="hstack gap-2 text-center me-4">
+															<div><img src="/fotovolt/media/financovanie-ahojsplatky.png" height="28" alt="Financovanie cez Ahojsplátky"></div>
+															<div>Ahojsplátky</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="list-group-item dropdown">
+												<a data-bs-toggle="collapse" class="dropdown-toggle link-dark text-decoration-none" href="#fvSolutionInstallation">
+													<span class="me-1 text-wrap lm-sm">Dodávka a montáž solárnej elektrárne</span>
+												</a>
+												<div id="fvSolutionInstallation" class="collapse my-2">
+													Po dodaní prvkov fotovoltického zariadenia na miesto montáže je elektráreň vyrobená montážnym tímom so zvláštnou starostlivosťou a presnosťou.
+												</div>
+											</li>
 											<li class="list-group-item">Pripojenie k elektrickej sieti</li>
-											<li class="list-group-item">Uvedenie do prevádzky a kontrola činnosti zariadenia</li>
-											<li class="list-group-item">Dokumentácia pre elektráreň a uvedenie do prevádzky</li>
-											<li class="list-group-item">Záručný a pozáručný servis elektrárne</li>
+											<li class="list-group-item dropdown">
+												<a data-bs-toggle="collapse" class="dropdown-toggle link-dark text-decoration-none" href="#fvSolutionOperation">
+													<span class="me-1 text-wrap lm-sm">Uvedenie do prevádzky a kontrola činnosti zariadenia</span>
+												</a>
+												<div id="fvSolutionOperation" class="collapse my-2">
+													Investíciami do vlastnej solárnej elektrárne zaisťujete svoju nezávislosť, šetríte peniaze a chránite životné prostredie.
+												</div>
+											</li>
+											<li class="list-group-item text-wrap lm-sm">Dokumentácia pre solárnu elektráreň</li>
+											<li class="list-group-item text-wrap lm-sm">Záručný a pozáručný servis elektrárne</li>
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="container-fluid bg-white py-5">
+					<div class="container-fluid bg-white py-4 py-md-5">
 						<div class="container g-0">
-							<div class="d-flex align-items-start">
-								<div class="nav flex-column nav-pills me-3" id="fvStepByStepTabs" role="tablist" aria-orientation="vertical">
-									<button class="nav-link active" id=fvStepByStep-audit-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-audit" type="button" role="tab" aria-controls="fvStepByStep-audit" aria-selected="true">
-										Konzultácia &amp; Audit
-									</button>
-									<button class="nav-link" id="fvStepByStep-design-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-design" type="button" role="tab" aria-controls="fvStepByStep-design" aria-selected="false">
-										Individuálny design
-									</button>
-									<button class="nav-link" id="fvStepByStep-finance-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-finance" type="button" role="tab" aria-controls="fvStepByStep-finance" aria-selected="false">
-										Financovanie
-									</button>
-									<button class="nav-link" id="fvStepByStep-installation-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-installation" type="button" role="tab" aria-controls="fvStepByStep-installation" aria-selected="false">
-										Inštalácia fotovoltického zariadenia
-									</button>
-									<button class="nav-link" id="fvStepByStep-powerplant-tab" data-bs-toggle="pill" data-bs-target="#fvStepByStep-powerplant" type="button" role="tab" aria-controls="fvStepByStep-powerplant" aria-selected="false">
-										Vlastná solárna elektráreň
-									</button>
+							<div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 gx-3">
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-primary bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-environment.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">Čistá energia</div>
+										<div class="fs-6 lh-sm">Využívajte čistú energiu zo slnka.</div>
+									</div>
 								</div>
-								<div class="tab-content" id="fvStepByStepbContent">
-									<div class="tab-pane fade show active" id="fvStepByStep-audit" role="tabpanel" aria-labelledby="fvStepByStep-audit-tab">
-										Naši technickí a obchodní poradcovia vyberajú vhodný výkon fotovoltického zariadenia. Určia jeho umiestnenie a zvolia formu financovania: predplatné, hotovosť alebo leasing.
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-warning bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-handshake.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">Dotácie od štátu</div>
+										<div class="fs-6 lh-sm">Štát vám prispeje až do výšky 1500€</div>
 									</div>
-									<div class="tab-pane fade" id="fvStepByStep-design" role="tabpanel" aria-labelledby="fvStepByStep-design-tab">
-										Po audite naše projekčné oddelenie vypracuje individuálny projekt solárnej elektrárne, ktorý zabezpečí maximálny úžitok z investície.
+								</div>
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-secondary bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-atom.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">Najmodernejšia technológia</div>
+										<div class="fs-6 lh-sm">Čistý dizajn a vysoký príkon.</div>
 									</div>
-									<div class="tab-pane fade" id="fvStepByStep-finance" role="tabpanel" aria-labelledby="fvStepByStep-finance-tab">
-										Zjednodušujeme celý proces. Zabezpečíme vám výhodné financovanie s najlepšími na trhu.
-										<div class="d-flex flex-wrap mt-2">
-											<div class="hstack gap-2 text-center me-4">
-												<div><img src="/fotovolt/media/financovanie-homecredit.png" height="28" alt="Financovanie cez Homecredit"></div>
-												<div>Homecredit</div>
-											</div>
-											<div class="hstack gap-2 text-center me-4">
-												<div><img src="/fotovolt/media/financovanie-ahojsplatky.png" height="28" alt="Financovanie cez Ahojsplátky"></div>
-												<div>Ahojsplátky</div>
-											</div>
-											<div class="hstack gap-2 text-center me-4">
-												<div><img src="/fotovolt/media/financovanie-zinceuro.png" height="28" alt="Financovanie cez ZincEuro"></div>
-												<div>ZincEuro</div>
-											</div>
-										</div>
+								</div>
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-primary bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-sun.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">Vyvážená spotreba</div>
+										<div class="fs-6 lh-sm">Spotrebúvajte energiu efektívne.</div>
 									</div>
-									<div class="tab-pane fade" id="fvStepByStep-installation" role="tabpanel" aria-labelledby="fvStepByStep-installation-tab">
-										Po dodaní prvkov fotovoltického zariadenia na miesto montáže je elektráreň vyrobená montážnym tímom so zvláštnou starostlivosťou a presnosťou.
+								</div>
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-warning bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-euro.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">Vysoká návratnosť</div>
+										<div class="fs-6 lh-sm">Drahá sieťová elektrina zvýhodňuje investíciu do fotovoltiky.</div>
 									</div>
-									<div class="tab-pane fade" id="fvStepByStep-powerplant" role="tabpanel" aria-labelledby="fvStepByStep-powerplant-tab">
-										Investíciami do vlastnej solárnej elektrárne zaisťujete svoju nezávislosť, šetríte peniaze a chránite životné prostredie.
+								</div>
+								<div class="col p-2">
+									<div class="vstack gap-2 p-3 bg-secondary bg-opacity-25 rounded-3 h-100">
+										<div class="pb-2"><img src="/fotovolt/media/icon-servers.png" width="40" height="40"></div>
+										<div class="fs-5 fw-bold lh-sm">25-ročná záruka</div>
+										<div class="fs-6 lh-sm">Zabezpečíme servis, inštaláciu a zapojenie do siete.</div>
 									</div>
 								</div>
 							</div>
@@ -419,11 +470,12 @@ html{ scroll-behavior:smooth; }
 							<div class="row row-cols-1 row-cols-md-2 gx-5 gy-3 py-4 py-md-5">
 								<div class="col">
 									<div class="d-flex vstack gap-0 rounded-3 h-100">
-										<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre domácnosti</div>
+										<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold"><span class="d-xl-inline d-none">Fotovoltika </span>pre domácnosti</div>
 										<div class="p-4 bg-white rounded-bottom flex-fill">
-											<div>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosť s rôznymi zdrojmi energie, ktoré sú určené pre farmy rôznych veľkostí a rôznych energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Odporúčame ako štandardné súpravy, tak aj pokročilejšie riešenia SolarEdge, ktoré sa vyznačujú zvýšenou účinnosťou (o 25%), a to aj vtedy, keď sú solárne panely umiestnené v tienistých oblastiach.</div>
+											<div>Energetická nezávislosť od neustáleho zvyšovania cien elektriny vďaka vlastnej solárnej elektrárni.</div>
 											<div><a data-bs-toggle="collapse" href="#fvProductsHome">Viac...</a></div>
 											<div id="fvProductsHome" class="collapse mt-3">
+												<p>Naša ponuka obsahuje fotovoltické zariadenia pre domácnosť s rôznymi zdrojmi energie, ktoré sú určené pre farmy rôznych veľkostí a rôznych energetických potrieb. V závislosti od výkonu solárnej elektrárne sa líšia počtom fotovoltických modulov a výkonom invertora. Odporúčame ako štandardné súpravy, tak aj pokročilejšie riešenia SolarEdge, ktoré sa vyznačujú zvýšenou účinnosťou (o 25%), a to aj vtedy, keď sú solárne panely umiestnené v tienistých oblastiach.</p>
 												<h5>Akú fotovoltickú inštaláciu zvoliť pre rodinný dom?</h5>
 												<p>Inštalácia by mala byť vybraná tak, aby plne uspokojila energetické potreby vášho domu. Panely by sa mali inštalovať na strechu alebo na zem s vhodným sklonom, pokiaľ je to možné, úplne na južnú stranu. Všetky tieto a ďalšie dôležité informácie vám radi vysvetlíme počas <a class="link-primary" href="#kontakt" title="Požiadajte o Audit zadarmo">Auditu zadarmo</a>.</p>
 											</div>
@@ -432,11 +484,12 @@ html{ scroll-behavior:smooth; }
 								</div>
 								<div class="col">
 									<div class="d-flex vstack gap-0 rounded-3 h-100">
-										<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold">Pre spoločnosti</div>
+										<div class="bg-dark bg-opacity-75 text-white text-uppercase w-100 rounded-top px-4 py-2 fs-3 fw-bold"><span class="d-xl-inline d-none">Fotovoltika </span>pre firmy</div>
 										<div class="p-4 bg-white rounded-bottom flex-fill">
-											<div>Inštalácia fotovoltických panelov poskytuje finančné výhody nielen pre domácnosti. Naša ponuka obsahuje aj moderné fotovoltické riešenia pre spoločnosti, ktoré chcú urobiť krok vpred k vývoju a zavádzaniu technických inovácií. Vďaka našim solárnym systémom nielenže výrazne znížia energetický výdaj, ale tiež – vďaka optimalizácii výrobných nákladov – získajú výhodu oproti konkurencii, zvýšia prestíž spoločnosti a vstúpia do konceptu CSR, teda spoločenskej zodpovednosti firiem.</div>
+											<div>Väčšia konkurencieschopnosť voči iným spoločnostiam vďaka bezplatnej energii zo slnka.</div>
 											<div><a data-bs-toggle="collapse" href="#fvProductsCompany">Viac...</a></div>
 											<div id="fvProductsCompany" class="collapse mt-3">
+												<p>Inštalácia fotovoltických panelov poskytuje finančné výhody nielen pre domácnosti. Naša ponuka obsahuje aj moderné fotovoltické riešenia pre spoločnosti, ktoré chcú urobiť krok vpred k vývoju a zavádzaniu technických inovácií. Vďaka našim solárnym systémom nielenže výrazne znížia energetický výdaj, ale tiež - vďaka optimalizácii výrobných nákladov - získajú výhodu oproti konkurencii, zvýšia prestíž spoločnosti a vstúpia do konceptu CSR, teda spoločenskej zodpovednosti firiem.</p>
 												<p>Náklady spojené s nákupom elektriny tvoria významnú časť výdavkov podnikov. Cena jednej kWh elektriny sa ročne zvyšuje o približne 4,5% a v roku 2019 sa cena elektriny zvýšila až o 60%. Jedným z efektívnych riešení na zníženie množstva účtov za elektrinu je výstavba solárnej elektrárne, ktorá je schopná znížiť náklady spojené s nákupom elektriny až o 70%. Veľkosť solárnej elektrárne závisí od dopytu spoločnosti po elektrine. Kapacita zariadenia by mala byť vhodne zvolená podľa obchodného profilu a možností montáže, aby sa zabránilo príliš dlhej dobe návratnosti investícií do vašej vlastnej solárnej elektrárne.</p>
 												<h5>Prečo sa firmám oplatí investovať do fotovoltiky?</h5>
 												<ul>
@@ -767,6 +820,15 @@ html{ scroll-behavior:smooth; }
 		</main>
 		<footer class="container-fluid bg-dark text-light">
 			<div class="container g-0 py-4 py-md-5">
+				<div class="hstack gap-4">
+					<div class="vstack gap-0 text-end">
+						<div>Získajte <span class="fs-3 fw-bold">100€</span></div>
+						<div>za odporučenie klienta.</div>
+					</div>
+					<div class="vstack gap-0 align-items-start">
+						<a href="/ref/" class="btn btn-lg btn-warning flex-fill align-items-center d-flex">Viac Info</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		</footer>
